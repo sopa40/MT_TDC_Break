@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../masterDesign.srcs/sources_1/new/delay_chain.sv" \
+"../../../../masterDesign.srcs/sources_1/new/dff.sv" \
+"../../../../masterDesign.srcs/sources_1/new/inv.sv" \
+"../../../../masterDesign.srcs/sources_1/new/mux.sv" \
+"../../../../masterDesign.srcs/sources_1/new/nor_chain.sv" \
+"../../../../masterDesign.srcs/sources_1/new/top_module.sv" \
+"../../../../masterDesign.srcs/sources_1/new/xor.sv" \
+"../../../../masterDesign.srcs/top_sim/new/top_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../masterDesign.srcs/sources_1/new/inv.sv" \
+
+verilog xil_defaultlib  \
+"../../../../masterDesign.srcs/sim_2/new/inv_pair_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

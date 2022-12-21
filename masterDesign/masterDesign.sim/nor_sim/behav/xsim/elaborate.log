@@ -1,0 +1,17 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/vivado_tool/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot nor_chain_tb_behav xil_defaultlib.nor_chain_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 4 for port 'mux_in' [C:/vivado_pj/masterDesign/masterDesign.srcs/nor_sim/new/nor_chain_tb.sv:8]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.nor_gate
+Compiling module xil_defaultlib.nor_pair
+Compiling module xil_defaultlib.nor_chain_default
+Compiling module xil_defaultlib.nor_chain_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot nor_chain_tb_behav
