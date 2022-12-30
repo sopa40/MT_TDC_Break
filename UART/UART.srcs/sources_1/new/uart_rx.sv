@@ -3,7 +3,7 @@
 `include "uart_defs.sv"
 
 module uart_rx(
-        input logic  clk,
+        input logic clk,
         input logic rst,
         input logic din,
         output logic [7:0] data_out,

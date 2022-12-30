@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Dec 29 18:29:33 2022
+| Date         : Thu Dec 29 19:52:53 2022
 | Host         : DESKTOP-ROSU00D running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
 | Design       : top_module
@@ -34,8 +34,8 @@ Table of Contents
 | Slice LUTs*             |   44 |     0 |          0 |     14600 |  0.30 |
 |   LUT as Logic          |   44 |     0 |          0 |     14600 |  0.30 |
 |   LUT as Memory         |    0 |     0 |          0 |      5000 |  0.00 |
-| Slice Registers         |   52 |     0 |          0 |     29200 |  0.18 |
-|   Register as Flip Flop |   52 |     0 |          0 |     29200 |  0.18 |
+| Slice Registers         |   62 |     0 |          0 |     29200 |  0.21 |
+|   Register as Flip Flop |   62 |     0 |          0 |     29200 |  0.21 |
 |   Register as Latch     |    0 |     0 |          0 |     29200 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |      7300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      3650 |  0.00 |
@@ -58,8 +58,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 1     |          Yes |         Set |            - |
-| 51    |          Yes |       Reset |            - |
+| 8     |          Yes |         Set |            - |
+| 54    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,18 +147,18 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   51 |        Flop & Latch |
-| LUT5     |   16 |                 LUT |
-| LUT6     |   13 |                 LUT |
-| LUT4     |   13 |                 LUT |
+| FDRE     |   54 |        Flop & Latch |
+| LUT4     |   15 |                 LUT |
+| LUT2     |   13 |                 LUT |
+| LUT6     |   12 |                 LUT |
+| LUT3     |   12 |                 LUT |
+| FDSE     |    8 |        Flop & Latch |
 | CARRY4   |    8 |          CarryLogic |
-| OBUF     |    7 |                  IO |
-| LUT3     |    5 |                 LUT |
+| OBUF     |    6 |                  IO |
 | IBUF     |    4 |                  IO |
-| LUT2     |    3 |                 LUT |
+| LUT5     |    3 |                 LUT |
+| OBUFT    |    2 |                  IO |
 | LUT1     |    2 |                 LUT |
-| OBUFT    |    1 |                  IO |
-| FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
