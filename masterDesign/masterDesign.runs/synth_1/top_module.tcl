@@ -70,10 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/hazik/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13940-DESKTOP-ROSU00D/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s25csga225-1
 
@@ -96,6 +93,9 @@ read_verilog -library xil_defaultlib -sv {
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv
+  C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_defs.sv
+  C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv
+  C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv
 }
@@ -108,6 +108,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc
+set_property used_in_implementation false [get_files C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp
