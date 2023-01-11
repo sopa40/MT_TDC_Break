@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc rfile:../../../masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc rfile:../../../masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN M9    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_14 Sch=gclk
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
@@ -23,3 +23,11 @@ set_property src_info {type:XDC file:1 line:37 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN L12   IOSTANDARD LVCMOS33 } [get_ports { tx }]; #IO_L6N_T0_D08_VREF_14 Sch=uart_rxd_out
 set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { uart_rx }]; #IO_L5N_T0_D07_14 Sch=uart_txd_in
+set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L1    IOSTANDARD LVCMOS33 } [get_ports { pio1 }]; #IO_L18N_T2_34 Sch=pio[01]
+set_property src_info {type:XDC file:1 line:55 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N1    IOSTANDARD LVCMOS33 } [get_ports { pio9 }]; #IO_L22N_T3_34 Sch=pio[09]
+set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C5    IOSTANDARD LVCMOS33 } [get_ports { pio40 }]; #IO_L5P_T0_34 Sch=pio[40]
+set_property src_info {type:XDC file:1 line:78 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN A4    IOSTANDARD LVCMOS33 } [get_ports { pio48 }]; #IO_L1P_T0_34 Sch=pio[48]

@@ -2,10 +2,9 @@
 
 module top_tb();
 
-    reg clk;
-    wire b;
+    logic btn, rgb, led, clk, tx, uart_rx, pio1, pio9;
     
-    top_module uut(.clk(clk), .error(b));
+    top_module uut(btn, rgb, led, clk, tx, uart_rx, pio1, pio9);
     
     initial begin 
         clk <= 0;
