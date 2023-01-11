@@ -70,7 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache C:/Users/hazik/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-6128-DESKTOP-ROSU00D/incrSyn
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s25csga225-1
 
@@ -91,7 +96,6 @@ read_verilog -library xil_defaultlib -sv {
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv
-  C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv
   C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv
   C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_defs.sv
   C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv

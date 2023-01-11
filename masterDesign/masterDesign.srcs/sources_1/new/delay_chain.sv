@@ -9,7 +9,7 @@ module delay_chain
     
     
     logic trans;
-    // how to sum the size into 1 variable??
+    // sum delay sizes in one variable
     //e.g.  const logic delay_len = INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT;
     logic [INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT - 1 : 0] mux_in ;
     logic [$clog2(INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT) - 1 : 0] sel ;
@@ -19,6 +19,6 @@ module delay_chain
     nor_chain #(.NOR_DELAY_LEN(NOR_DELAY_LEN_INPUT)) nor_delay_line(.a(trans), 
                             .mux_in(mux_in[INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT - 1 : INV_DELAY_LEN_INPUT]), .b(b));
                             
-    generic_mux #(.NUMBER(INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT)) sel_mux (.sel(sel), .mux_in(mux_in[INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT - 1 : 0]), .out(b));
+    //generic_mux #(.NUMBER(INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT)) sel_mux (.sel(sel), .mux_in(mux_in[INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT - 1 : 0]), .out(b));
     
 endmodule

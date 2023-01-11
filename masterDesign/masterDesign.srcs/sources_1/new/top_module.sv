@@ -2,24 +2,30 @@
 
 //-------------------------------specify delay length in TOP module or in delay chain module? 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 4
+    `define INV_DELAY_LEN 1000
 `endif
 
 `ifndef NOR_DELAY_LEN
-    `define NOR_DELAY_LEN 3
+    `define NOR_DELAY_LEN 96
 `endif
 
-module top_module(btn, rgb, led, clk, tx, uart_rx);
+module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio40);
     input clk; 
     input logic [1 : 0] btn;
     output logic [2 : 0] rgb;
     output logic [3 : 0] led;
     input logic uart_rx;
     output logic tx;
+    // mirrored clk
+    output pio1;
+    // delay output
+    output pio9;
+    // dff output
+    output pio40;
     
-
     // delay vars
     logic launch_reset, capture_reset;
+    logic dff_input; 
     logic data_ref, data_actual;
     logic xor_result;
     logic error;
@@ -32,10 +38,13 @@ module top_module(btn, rgb, led, clk, tx, uart_rx);
     logic en, rdy;
     logic [7:0] tx_data_in;
     
+    // for testing of delay of each delay unit
+    assign pio1 = clk;
+    assign pio9 = data_actual;
+    assign pio40 = data_ref;
     
     // delay chain code
-    assign data_ref = ~clk;
-    dff lauch_dff(.d(clk), .clk(clk), .reset(launch_reset), .q(data_ref));
+    dff lauch_dff(.d(dff_input), .clk(clk), .reset(launch_reset), .q(data_ref));
     
     delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.a(data_ref), .b(data_actual));
     
@@ -55,6 +64,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx);
     // assign tx_data_in = rx_data_out;
     
     initial begin 
+        dff_input <= 0;
         state <= 0;
         rst <= 0;
         valid <= 0;
@@ -63,6 +73,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx);
     end
     
     always @ (posedge clk) begin
+        dff_input <= ~dff_input;
         state <= state;
         en <= en; 
         if (valid && rdy && rx_data_out == 8'h73) begin
