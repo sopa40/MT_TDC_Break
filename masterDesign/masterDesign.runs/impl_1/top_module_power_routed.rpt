@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Thu Jan 12 11:07:47 2023
+| Date             : Thu Jan 12 23:57:00 2023
 | Host             : DESKTOP-VEN7OOV running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 | Design           : top_module
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      152 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       55 |     14600 |            0.38 |
+| Slice Logic    |    <0.001 |      178 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       62 |     14600 |            0.42 |
+|   Register     |    <0.001 |       82 |     29200 |            0.28 |
+|   CARRY4       |    <0.001 |       12 |      3650 |            0.33 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Register     |    <0.001 |       67 |     29200 |            0.23 |
-|   CARRY4       |    <0.001 |        8 |      3650 |            0.22 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |    <0.001 |      116 |       --- |             --- |
-| I/O            |     0.003 |       14 |       150 |            9.33 |
+| Signals        |    <0.001 |      141 |       --- |             --- |
+| I/O            |     0.002 |       14 |       150 |            9.33 |
 | Static Power   |     0.061 |          |           |                 |
 | Total          |     0.064 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
