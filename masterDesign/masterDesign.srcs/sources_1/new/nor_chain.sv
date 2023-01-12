@@ -5,8 +5,7 @@ module nor_pair(input a, output logic b);
     logic value, trans;
 
     module nor_gate(input a, b, output logic c);
-        //below is a random magic delay number, to be changed later
-        assign #19 c = ~(a|b);
+        assign c = ~(a|b);
     endmodule 
 
     initial begin
@@ -18,7 +17,6 @@ module nor_pair(input a, output logic b);
 
 endmodule
 
-// MB add conditions if i <= 2?
 module nor_chain #(parameter NOR_DELAY_LEN = 4)(input a,
                             output logic [NOR_DELAY_LEN - 1:0] mux_in, output logic b);
     

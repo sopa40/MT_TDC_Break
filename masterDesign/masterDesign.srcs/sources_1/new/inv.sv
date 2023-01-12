@@ -5,8 +5,7 @@ module inv_pair(input a, output logic b);
     logic trans;
 
     module inv_gate(input a, output logic b);
-        //below is a random magic delay number, to be changed later
-        assign #13 b = ~a;
+        assign b = ~a;
         
     endmodule
     
@@ -16,7 +15,6 @@ module inv_pair(input a, output logic b);
 endmodule
 
 
-// MB add conditions if i <= 2?
 module inv_chain #(parameter INV_DELAY_LEN = 10)(input a, output logic [INV_DELAY_LEN - 1:0] mux_in, 
                                                             output logic b);
     

@@ -2,20 +2,28 @@
 
 //-------------------------------specify delay length in TOP module or in delay chain module? 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 4
+    `define INV_DELAY_LEN 27000
 `endif
 
 `ifndef NOR_DELAY_LEN
-    `define NOR_DELAY_LEN 3
+    `define NOR_DELAY_LEN 768
 `endif
 
-module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio40, pio48);
-    input clk; 
+`ifndef DIVISOR_SIZE 
+    `define DIVISOR_SIZE 2
+`endif
+
+module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio40, pio48);
+    input src_clk; 
     input logic [1 : 0] btn;
     output logic [2 : 0] rgb;
     output logic [3 : 0] led;
     input logic uart_rx;
     output logic tx;
+    
+    logic [`DIVISOR_SIZE-1:0] clk_div_cnt;
+    logic clk;
+    
     // reference data for delay line
     output logic pio1;
     // actual data after delay line
@@ -76,6 +84,14 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio40, pio48);
         valid <= 0;
         rx_data_out <= 0;
         data_reg <= 32'h48;
+    end
+    
+    always @ (posedge src_clk) begin
+        clk_div_cnt <= clk_div_cnt + 1;
+        if (clk_div_cnt >= (`DIVISOR_SIZE-1)) begin
+            clk_div_cnt <= 0;
+        end
+        clk <= (clk_div_cnt < `DIVISOR_SIZE/2) ? 1 : 0;
     end
     
     always @ (posedge clk) begin
