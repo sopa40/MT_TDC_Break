@@ -14,7 +14,7 @@ module delay_chain
     logic [INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT - 1 : 0] mux_in ;
     logic [$clog2(INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT) - 1 : 0] sel ;
     
-    inv_chain #(.INV_DELAY_LEN(INV_DELAY_LEN_INPUT)) inv_delay_line(.a(a), 
+    (*DONT_TOUCH= "true"*) inv_chain #(.INV_DELAY_LEN(INV_DELAY_LEN_INPUT)) inv_delay_line(.a(a), 
                             .mux_in(mux_in [INV_DELAY_LEN_INPUT - 1 : 0]), .b(trans));
     nor_chain #(.NOR_DELAY_LEN(NOR_DELAY_LEN_INPUT)) nor_delay_line(.a(trans), 
                             .mux_in(mux_in[INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT - 1 : INV_DELAY_LEN_INPUT]), .b(b));

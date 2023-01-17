@@ -27,6 +27,8 @@ set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN L1    IOSTANDARD LVCMOS33 } [get_ports { pio1 }]; #IO_L18N_T2_34 Sch=pio[01]
 set_property src_info {type:XDC file:1 line:55 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN N1    IOSTANDARD LVCMOS33 } [get_ports { pio9 }]; #IO_L22N_T3_34 Sch=pio[09]
+set_property src_info {type:XDC file:1 line:56 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { pio16 }]; #IO_L11P_T1_SRCC_14 Sch=pio[16]
 set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN C5    IOSTANDARD LVCMOS33 } [get_ports { pio40 }]; #IO_L5P_T0_34 Sch=pio[40]
 set_property src_info {type:XDC file:1 line:78 export:INPUT save:INPUT read:READ} [current_design]

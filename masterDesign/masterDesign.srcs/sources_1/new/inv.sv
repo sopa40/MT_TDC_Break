@@ -9,8 +9,8 @@ module inv_pair(input a, output logic b);
         
     endmodule
     
-    inv_gate inv_one(.a(a), .b(trans));
-    inv_gate inv_two(.a(trans), .b(b));
+    (*DONT_TOUCH= "true"*) inv_gate inv_one(.a(a), .b(trans));
+    (*DONT_TOUCH= "true"*) inv_gate inv_two(.a(trans), .b(b));
 
 endmodule
 
@@ -23,10 +23,10 @@ module inv_chain #(parameter INV_DELAY_LEN = 10)(input a, output logic [INV_DELA
     generate
         for (genvar i = 0; i < INV_DELAY_LEN; i = i+1) begin
             if (i == 0) begin
-                inv_pair inv_pair_unit(.a(a), .b(trans[i]));
+                (*DONT_TOUCH= "true"*) inv_pair inv_pair_unit(.a(a), .b(trans[i]));
             end        
             else begin
-                inv_pair inv_pair_unit(.a(trans[i-1]), .b(trans[i]));
+                (*DONT_TOUCH= "true"*) inv_pair inv_pair_unit(.a(trans[i-1]), .b(trans[i]));
             end
             assign mux_in[i] = trans[i];
         end

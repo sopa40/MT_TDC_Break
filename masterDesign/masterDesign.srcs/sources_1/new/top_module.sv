@@ -2,18 +2,18 @@
 
 //-------------------------------specify delay length in TOP module or in delay chain module? 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 13000
+    `define INV_DELAY_LEN 200
 `endif
 
 `ifndef NOR_DELAY_LEN
-    `define NOR_DELAY_LEN 768
+    `define NOR_DELAY_LEN 56
 `endif
 
 `ifndef DIVISOR_SIZE 
     `define DIVISOR_SIZE 60000
 `endif
 
-module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio40, pio48);
+module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio48);
     input src_clk; 
     input logic [1 : 0] btn;
     output logic [2 : 0] rgb;
@@ -28,6 +28,8 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio40, pio48)
     output logic pio1;
     // actual data after delay line
     output logic pio9;
+    //whole chain output
+    output logic pio16;
     // clock output
     output logic pio40;
     // input delay line;
@@ -51,14 +53,15 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio40, pio48)
     // for measurments for tuning:
     assign pio1 = data_ref;  
     assign pio9 = data_actual;
+    assign pio16 = error;
     assign pio40 = clk;
     assign pio48 = delay_input;
       
     
     // delay chain code
     dff lauch_dff(.d(delay_input), .clk(clk), .reset(launch_reset), .q(data_ref));
-    
-    delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.a(data_ref), .b(data_actual));
+   
+    (*DONT_TOUCH= "true"*) delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.a(data_ref), .b(data_actual));
     
     xor_gate data_comp(.a(data_ref), .b(data_actual), .c(xor_result));
     
