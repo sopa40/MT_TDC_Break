@@ -2,15 +2,15 @@
 
 //-------------------------------specify delay length in TOP module or in delay chain module? 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 10
+    `define INV_DELAY_LEN 100
 `endif
 
 `ifndef NOR_DELAY_LEN
-    `define NOR_DELAY_LEN 2
+    `define NOR_DELAY_LEN 20
 `endif
 
 `ifndef DIVISOR_SIZE 
-    `define DIVISOR_SIZE 10
+    `define DIVISOR_SIZE 60000
 `endif
 
 module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio48);

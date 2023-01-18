@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc rfile:../../../masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc rfile:../../../masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN M9    IOSTANDARD LVCMOS33 } [get_ports { src_clk }]; #IO_L13P_T2_MRCC_14 Sch=gclk
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
