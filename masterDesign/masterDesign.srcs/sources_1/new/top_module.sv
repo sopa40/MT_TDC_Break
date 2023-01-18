@@ -57,7 +57,6 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
     assign pio40 = clk;
     assign pio48 = delay_input;
       
-    
     // delay chain code
     dff lauch_dff(.d(delay_input), .clk(clk), .reset(launch_reset), .q(data_ref));
    
@@ -104,8 +103,13 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
         if (valid && rdy && rx_data_out == 8'h73) begin
             en <= 1;
             state <= ~state;
+            data_reg[8] <= error;
             tx_data_in <= data_reg[7:0];
-        end     
+        end
+        if (rdy && tx_data_in == 8'h73) begin
+            en <= 1;
+            tx_data_in <= data_reg[15:8];
+        end 
         else
             en <= 0;    
     end

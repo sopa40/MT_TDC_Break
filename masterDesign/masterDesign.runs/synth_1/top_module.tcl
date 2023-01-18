@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.tcl"
+  variable script "C:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,38 +70,33 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s25csga225-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/vivado_pj/masterDesign/masterDesign.cache/wt [current_project]
-set_property parent.project_path D:/vivado_pj/masterDesign/masterDesign.xpr [current_project]
+set_property webtalk.parent_dir C:/vivado_pj/masterDesign/masterDesign.cache/wt [current_project]
+set_property parent.project_path C:/vivado_pj/masterDesign/masterDesign.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {D:/vivado_pj/masterDesign/masterDesign.board} [current_project]
+set_property board_part_repo_paths {C:/vivado_pj/masterDesign/masterDesign.board} [current_project]
 set_property board_part digilentinc.com:cmod-s7-25:part0:1.0 [current_project]
-set_property ip_output_repo d:/vivado_pj/masterDesign/masterDesign.cache/ip [current_project]
+set_property ip_output_repo c:/vivado_pj/masterDesign/masterDesign.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv
-  D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_defs.sv
-  D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv
-  D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv
+  C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv
+  C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv
+  C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv
+  C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv
+  C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_defs.sv
+  C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv
+  C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv
+  C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv
+  C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -112,12 +107,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc
-set_property used_in_implementation false [get_files D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
+read_xdc C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc
+set_property used_in_implementation false [get_files C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental D:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp
+read_checkpoint -auto_incremental -incremental C:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
