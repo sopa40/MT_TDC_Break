@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module.tcl"
+  variable script "C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module.tcl"
   variable category "vivado_impl"
 }
 
@@ -126,21 +126,21 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s25csga225-1
-  set_property board_part_repo_paths {D:/vivado_pj/masterDesign/masterDesign.board} [current_project]
+  set_property board_part_repo_paths {C:/vivado_pj/masterDesign/masterDesign.board} [current_project]
   set_property board_part digilentinc.com:cmod-s7-25:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/vivado_pj/masterDesign/masterDesign.cache/wt [current_project]
-  set_property parent.project_path D:/vivado_pj/masterDesign/masterDesign.xpr [current_project]
-  set_property ip_output_repo D:/vivado_pj/masterDesign/masterDesign.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/vivado_pj/masterDesign/masterDesign.cache/wt [current_project]
+  set_property parent.project_path C:/vivado_pj/masterDesign/masterDesign.xpr [current_project]
+  set_property ip_output_repo C:/vivado_pj/masterDesign/masterDesign.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.dcp
+  add_files -quiet C:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc
+  read_xdc C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

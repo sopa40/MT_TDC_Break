@@ -9,7 +9,7 @@ module delay_chain
     
     
     logic trans;
-    logic complete_delay_out;
+    logic delay_out;
     // how to sum the size into 1 variable??
     //e.g.  const logic delay_len = INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT;
     logic [INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT - 1 : 0] mux_in ;

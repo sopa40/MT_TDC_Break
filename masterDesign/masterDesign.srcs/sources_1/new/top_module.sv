@@ -2,7 +2,7 @@
 
 //-------------------------------specify delay length in TOP module or in delay chain module? 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 100
+    `define INV_DELAY_LEN 1000
 `endif
 
 `ifndef NOR_DELAY_LEN
@@ -23,6 +23,17 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
     
     logic [`DIVISOR_SIZE-1:0] clk_div_cnt;
     logic clk;
+    
+    logic rst;
+    logic locked;
+    logic clk_100mhz;
+    clk_gen_100 clkgen(
+        .clk_in(src_clk),
+        .locked(locked),
+        .reset(rst),
+        .clk_out(clk_100mhz)  
+    ); 
+    
     
     // reference data for delay line
     output logic pio1;
