@@ -53,12 +53,14 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
     // delay vars
     logic launch_reset, capture_reset;
     logic delay_input, data_ref, data_actual;
+    //MUX selector 
+    logic [$clog2(`INV_DELAY_LEN + `NOR_DELAY_LEN) - 1 : 0] sel;
     logic xor_result;
     logic error;
     logic [31:0] data_reg;
     
     // UART vars
-    logic valid, rst;
+    logic valid;
     logic state;
     logic [7:0] rx_data_out;
     logic en, rdy;
@@ -74,7 +76,7 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
     // delay chain code
     dff lauch_dff(.d(delay_input), .clk(clk), .reset(launch_reset), .q(data_ref));
    
-    (*DONT_TOUCH= "true"*) delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.a(data_ref), .b(data_actual));
+    (*DONT_TOUCH= "true"*) delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.delay_in(data_ref), .sel(sel), .delay_out(data_actual));
     
     xor_gate data_comp(.a(data_ref), .b(data_actual), .c(xor_result));
     
@@ -94,6 +96,7 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
     initial begin 
         state <= 0;
         delay_input <= 0;
+        sel <= 200;
         launch_reset <= 0;
         capture_reset <= 0;
         rst <= 0;

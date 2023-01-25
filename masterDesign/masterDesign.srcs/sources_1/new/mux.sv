@@ -6,8 +6,8 @@ module generic_mux #(parameter NUMBER = 2,
                      localparam SELECT_W = $clog2(NUMBER)) 
  (input logic [SELECT_W-1:0] sel, 
   input logic [NUMBER-1:0] mux_in,                   
-  output logic out);
+  output logic mux_out);
   
-  assign out = mux_in[sel];
+  assign mux_out = mux_in[sel];
     
 endmodule 
