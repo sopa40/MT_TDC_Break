@@ -10,11 +10,12 @@
 `endif
 
 `ifndef DIVISOR_SIZE 
+    // 100 Hz
     `define DIVISOR_SIZE 60000
 `endif
 
-module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio48);
-    input src_clk; 
+module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio48);
+    input clk; 
     input logic [1 : 0] btn;
     output logic [2 : 0] rgb;
     output logic [3 : 0] led;
@@ -22,7 +23,7 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
     output logic tx;
     
     logic [`DIVISOR_SIZE-1:0] clk_div_cnt;
-    logic clk;
+    logic clk_variable;
     
     logic rst;
     logic locked;
@@ -54,7 +55,7 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
     logic launch_reset, capture_reset;
     logic delay_input, data_ref, data_actual;
     //MUX selector 
-    logic [$clog2(`INV_DELAY_LEN + `NOR_DELAY_LEN) - 1 : 0] sel;
+    logic [15 : 0] sel;
     logic xor_result;
     logic error;
     logic [31:0] data_reg;
@@ -105,22 +106,20 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
         data_reg <= 32'h48;
     end
     
-    always @ (posedge src_clk) begin
+    always @ (posedge clk) begin
+        /* Divisor code */
         clk_div_cnt <= clk_div_cnt + 1;
         if (clk_div_cnt >= (`DIVISOR_SIZE-1)) begin
             clk_div_cnt <= 0;
         end
-        clk <= (clk_div_cnt < `DIVISOR_SIZE/2) ? 1 : 0;
-    end
-    
-    always @ (posedge clk) begin
+        clk_variable <= (clk_div_cnt < `DIVISOR_SIZE/2) ? 1 : 0;
+        
+        /* UART Code */
         state <= state;
         en <= en; 
-        delay_input <= ~delay_input;
         if (valid && rdy && rx_data_out == 8'h73) begin
             en <= 1;
             state <= ~state;
-            data_reg[8] <= error;
             tx_data_in <= data_reg[7:0];
         end
         if (rdy && tx_data_in == 8'h73) begin
@@ -129,6 +128,10 @@ module top_module(btn, rgb, led, src_clk, tx, uart_rx, pio1, pio9, pio16, pio40,
         end 
         else
             en <= 0;    
+    end
+    
+    always @ (posedge clk_variable) begin
+        delay_input <= ~delay_input;
     end
 
 endmodule

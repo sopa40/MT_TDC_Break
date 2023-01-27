@@ -4,8 +4,8 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
 # 12 MHz System Clock
-set_property -dict { PACKAGE_PIN M9    IOSTANDARD LVCMOS33 } [get_ports { src_clk }]; #IO_L13P_T2_MRCC_14 Sch=gclk
-create_clock -add -name sys_clk_pin -period 83.33 -waveform {0 41.66} [get_ports { src_clk }];
+set_property -dict { PACKAGE_PIN M9    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_14 Sch=gclk
+create_clock -add -name sys_clk_pin -period 83.33 -waveform {0 41.66} [get_ports { clk }];
 
 # Push Buttons
 set_property -dict { PACKAGE_PIN D2    IOSTANDARD LVCMOS33 } [get_ports { btn[0] }]; #IO_L6P_T0_34 Sch=btn[0]
