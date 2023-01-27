@@ -62,10 +62,13 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     
     // UART vars
     logic valid;
-    logic state;
+    logic color_indicator;
     logic [7:0] rx_data_out;
     logic en, rdy;
     logic [7:0] tx_data_in;
+    // UART state machine
+    typedef enum {IDLE, RCV_FIRST_BYTE, RCV_SECOND_BYTE, RCVD, SET_DONE} state_t;
+    state_t current_state;
 
     // for measurments for tuning:
     assign pio1 = data_ref;  
@@ -84,7 +87,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     dff capture_dff(.d(xor_result), .clk(clk), .reset(capture_reset), .q(error));
     
     // UART code
-    assign rgb[2] = state;
+    assign rgb[2] = color_indicator;
     
     uart_rx uart_reader(.clk(clk), .rst(rst), 
                 .din(uart_rx), .data_out(rx_data_out), .valid(valid));
@@ -95,7 +98,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     // assign tx_data_in = rx_data_out;
     
     initial begin 
-        state <= 0;
+        color_indicator <= 0;
         delay_input <= 0;
         sel <= 200;
         launch_reset <= 0;
@@ -106,7 +109,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
         data_reg <= 32'h48;
     end
     
-    always @ (posedge clk) begin
+    always_ff @ (posedge clk) begin
         /* Divisor code */
         clk_div_cnt <= clk_div_cnt + 1;
         if (clk_div_cnt >= (`DIVISOR_SIZE-1)) begin
@@ -115,11 +118,53 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
         clk_variable <= (clk_div_cnt < `DIVISOR_SIZE/2) ? 1 : 0;
         
         /* UART Code */
-        state <= state;
-        en <= en; 
+        color_indicator <= color_indicator;
+        en <= en;
+        case (current_state)
+            IDLE: begin
+                if (valid && rdy && rx_data_out == 8'h73) begin
+                    color_indicator <= ~color_indicator;
+                    current_state <= RCV_FIRST_BYTE;
+                end
+            end
+            RCV_FIRST_BYTE: begin
+                if (valid) begin
+                    color_indicator <= ~color_indicator;
+                    sel[7:0] <= rx_data_out[7:0];
+                    current_state <= RCV_SECOND_BYTE;
+                end
+            end
+            RCV_SECOND_BYTE: begin
+                if (valid) begin
+                    color_indicator <= ~color_indicator;
+                    sel[15:8] <= rx_data_out[7:0];
+                    current_state <= RCVD;
+                end
+            end
+            RCVD: begin
+                if (rdy) begin
+                    color_indicator <= ~color_indicator;
+                    tx_data_in[7:0] <= sel[15:8];
+                    en <= 1;
+                    current_state <= SET_DONE;
+                end
+            end
+            SET_DONE: begin
+                if (rdy) begin
+                    color_indicator <= ~color_indicator;
+                    tx_data_in[7:0] <= 8'h76;
+                    en <= 1;
+                    current_state <= IDLE;
+                end
+            end
+            
+            default: en <= 0;
+            
+        endcase
+        /*
         if (valid && rdy && rx_data_out == 8'h73) begin
             en <= 1;
-            state <= ~state;
+            color_indicator <= ~color_indicator;
             tx_data_in <= data_reg[7:0];
         end
         if (rdy && tx_data_in == 8'h73) begin
@@ -127,10 +172,11 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
             tx_data_in <= data_reg[15:8];
         end 
         else
-            en <= 0;    
+            en <= 0;   */           
     end
+        
     
-    always @ (posedge clk_variable) begin
+    always_ff @ (posedge clk_variable) begin
         delay_input <= ~delay_input;
     end
 
