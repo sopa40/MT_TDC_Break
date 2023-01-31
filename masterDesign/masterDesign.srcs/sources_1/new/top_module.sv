@@ -2,7 +2,7 @@
 
 //-------------------------------specify delay length in TOP module or in delay chain module? 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 500
+    `define INV_DELAY_LEN 1000
 `endif
 
 `ifndef NOR_DELAY_LEN
