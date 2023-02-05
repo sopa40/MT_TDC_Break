@@ -17,7 +17,7 @@ module delay_chain
     
     
     
-    (*DONT_TOUCH= "true"*) inv_chain #(.INV_DELAY_LEN(INV_DELAY_LEN_INPUT)) inv_delay_line(.a(delay_in), 
+    inv_chain #(.INV_DELAY_LEN(INV_DELAY_LEN_INPUT)) inv_delay_line(.a(delay_in), 
                             .mux_in(mux_in [INV_DELAY_LEN_INPUT - 1 : 0]), .b(trans));
     nor_chain #(.NOR_DELAY_LEN(NOR_DELAY_LEN_INPUT)) nor_delay_line(.a(trans), 
                             .mux_in(mux_in[INV_DELAY_LEN_INPUT + NOR_DELAY_LEN_INPUT - 1 : INV_DELAY_LEN_INPUT]), .b(chain_out));

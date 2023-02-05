@@ -1,18 +1,26 @@
 `timescale 1ns / 1ps
 
-//-------------------------------specify delay length in TOP module or in delay chain module? 
+`ifndef DIVISOR_SIZE 
+    // 100 Hz
+    `define DIVISOR_SIZE 60000
+`endif
+ 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 4000
+    `define INV_DELAY_LEN 200
 `endif
 
 `ifndef NOR_DELAY_LEN
     `define NOR_DELAY_LEN 20
 `endif
 
-`ifndef DIVISOR_SIZE 
-    // 100 Hz
-    `define DIVISOR_SIZE 60000
+`ifndef SET_LEN_START_CMD
+    `define SET_LEN_START_CMD 8'h73
 `endif
+
+`ifndef SET_LEN_SUCCESS_RESPONSE
+    `define SET_LEN_SUCCESS_RESPONSE 8'h76
+`endif
+
 
 module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio48);
     input clk; 
@@ -80,7 +88,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     // delay chain code
     dff lauch_dff(.d(delay_input), .clk(clk), .reset(launch_reset), .q(data_ref));
    
-    (*DONT_TOUCH= "true"*) delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.delay_in(data_ref), .sel(sel), .delay_out(data_actual));
+    delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.delay_in(data_ref), .sel(sel), .delay_out(data_actual));
     
     xor_gate data_comp(.a(data_ref), .b(data_actual), .c(xor_result));
     
@@ -94,13 +102,10 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     
     uart_tx uart_writer(.clk(clk), .rst(rst), .data_in(tx_data_in), .en(en), .dout(tx), .rdy(rdy));
     
-    // for UART echoing
-    // assign tx_data_in = rx_data_out;
-    
     initial begin 
         color_indicator <= 0;
         delay_input <= 0;
-        sel <= 200;
+        sel <= 100;
         launch_reset <= 0;
         capture_reset <= 0;
         rst <= 0;
@@ -123,7 +128,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
         case (current_state)
             IDLE: begin
                 en <= 0;
-                if (valid && rx_data_out == 8'h73) begin
+                if (valid && rx_data_out == `SET_LEN_START_CMD) begin
                     color_indicator <= ~color_indicator;
                     current_state <= RCV_FIRST_BYTE;
                 end
@@ -146,32 +151,19 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
                 if (rdy) begin
                     color_indicator <= ~color_indicator;
                     tx_data_in[7:0] <= sel[15:8];
-                    en <= 1;
                     current_state <= SET_DONE;
                 end
             end
             SET_DONE: begin
                 if (rdy) begin
                     color_indicator <= ~color_indicator;
-                    tx_data_in[7:0] <= 8'h76;
+                    tx_data_in[7:0] <= `SET_LEN_SUCCESS_RESPONSE;
                     en <= 1;
                     current_state <= IDLE;
                 end
             end
             
-        endcase
-        /*
-        if (valid && rdy && rx_data_out == 8'h73) begin
-            en <= 1;
-            color_indicator <= ~color_indicator;
-            tx_data_in <= data_reg[7:0];
-        end
-        if (rdy && tx_data_in == 8'h73) begin
-            en <= 1;
-            tx_data_in <= data_reg[15:8];
-        end 
-        else
-            en <= 0;   */           
+        endcase     
     end
         
     

@@ -2,7 +2,7 @@
 
 module inv_pair(input a, output logic b);
 
-    (*DONT_TOUCH= "true"*) logic trans;
+    logic trans;
 
     module inv_gate(input a, output logic b);
         (*DONT_TOUCH= "true"*) assign b = ~a;
