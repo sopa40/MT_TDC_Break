@@ -2,7 +2,7 @@
 
 //-------------------------------specify delay length in TOP module or in delay chain module? 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 1000
+    `define INV_DELAY_LEN 4000
 `endif
 
 `ifndef NOR_DELAY_LEN
@@ -122,7 +122,8 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
         en <= en;
         case (current_state)
             IDLE: begin
-                if (valid && rdy && rx_data_out == 8'h73) begin
+                en <= 0;
+                if (valid && rx_data_out == 8'h73) begin
                     color_indicator <= ~color_indicator;
                     current_state <= RCV_FIRST_BYTE;
                 end
@@ -157,8 +158,6 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
                     current_state <= IDLE;
                 end
             end
-            
-            default: en <= 0;
             
         endcase
         /*

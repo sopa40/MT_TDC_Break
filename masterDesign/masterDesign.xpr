@@ -368,7 +368,6 @@
       <File Path="$PSRCDIR/sources_1/ip/clk_gen_100/clk_gen_100.xci">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
