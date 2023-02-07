@@ -25,15 +25,13 @@ while True:
         ser.write(START_CHAIN_VALUE)
         time.sleep(0.1)
         converted_value = delay_len.to_bytes(2, 'little')
-        print("sending..")
-        print(converted_value)
+        print("Sending new configuration...")
         ser.write(converted_value)
         print("Configuration sent!")
-        while True:
-            out = ser.read()
-            print("Response is: ")
-            print(out)
-    
+        response = ser.read()
+        if response == 'v':
+            print("Successfully set!")
+        
     elif cmd == 'q':
         break
         
