@@ -10,61 +10,70 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source top_module.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 395.137 ; gain = 72.734
-Command: read_checkpoint -auto_incremental -incremental D:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from D:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 394.340 ; gain = 60.105
+Command: read_checkpoint -auto_incremental -incremental C:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top_module -part xc7s25csga225-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Device 21-403] Loading part xc7s25csga225-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21824
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/vivado_tool/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-7075] Helper process launched with PID 10552
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/vivado_tool/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+CRITICAL WARNING: [Synth 8-9339] data object 'locked' is already declared [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:82]
+INFO: [Synth 8-6826] previous declaration of 'locked' is from here [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:37]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'locked' is ignored [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:82]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1188.715 ; gain = 408.004
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1198.414 ; gain = 409.465
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top_module' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:25]
-INFO: [Synth 8-6157] synthesizing module 'dff' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'dff' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv:4]
-INFO: [Synth 8-6157] synthesizing module 'delay_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv:3]
-	Parameter INV_DELAY_LEN_INPUT bound to: 4000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'top_module' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'clock_gen_24MHz' [C:/vivado_pj/masterDesign/masterDesign.runs/synth_1/.Xil/Vivado-6844-DESKTOP-ROSU00D/realtime/clock_gen_24MHz_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clock_gen_24MHz' (0#1) [C:/vivado_pj/masterDesign/masterDesign.runs/synth_1/.Xil/Vivado-6844-DESKTOP-ROSU00D/realtime/clock_gen_24MHz_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dff' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'delay_chain' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv:3]
+	Parameter INV_DELAY_LEN_INPUT bound to: 500 - type: integer 
 	Parameter NOR_DELAY_LEN_INPUT bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'inv_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:17]
-	Parameter INV_DELAY_LEN bound to: 4000 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'inv_pair' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'inv_gate' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'inv_gate' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
-INFO: [Synth 8-6157] synthesizing module 'inv_gate' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'inv_gate' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'inv_pair' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'inv_chain' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'nor_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'inv_chain' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:17]
+	Parameter INV_DELAY_LEN bound to: 500 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'inv_pair' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'inv_gate' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'inv_gate' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'inv_gate' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'inv_gate' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'inv_pair' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'inv_chain' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'nor_chain' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:20]
 	Parameter NOR_DELAY_LEN bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'nor_pair' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'nor_gate' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'nor_gate' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
-INFO: [Synth 8-6157] synthesizing module 'nor_gate' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'nor_gate' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'nor_pair' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'nor_chain' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:20]
-INFO: [Synth 8-6157] synthesizing module 'generic_mux' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv:5]
-	Parameter NUMBER bound to: 4004 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_mux' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv:5]
-INFO: [Synth 8-6155] done synthesizing module 'delay_chain' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv:3]
-WARNING: [Synth 8-689] width (16) of port connection 'sel' does not match port width (12) of module 'delay_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:91]
-INFO: [Synth 8-6157] synthesizing module 'xor_gate' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'xor_gate' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'uart_rx' [D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv:5]
-INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv:5]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv:5]
-INFO: [Synth 8-226] default block is never used [D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv:45]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv:5]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:128]
-INFO: [Synth 8-6155] done synthesizing module 'top_module' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:25]
-WARNING: [Synth 8-3848] Net led in module/entity top_module does not have driver. [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:29]
+INFO: [Synth 8-6157] synthesizing module 'nor_pair' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'nor_gate' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'nor_gate' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'nor_gate' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'nor_gate' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'nor_pair' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'nor_chain' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'generic_mux' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv:5]
+	Parameter NUMBER bound to: 504 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_mux' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'delay_chain' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv:3]
+WARNING: [Synth 8-689] width (16) of port connection 'sel' does not match port width (9) of module 'delay_chain' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:88]
+INFO: [Synth 8-6157] synthesizing module 'xor_gate' [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'xor_gate' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv:5]
+INFO: [Synth 8-226] default block is never used [C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv:45]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv:5]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:127]
+INFO: [Synth 8-6155] done synthesizing module 'top_module' (0#1) [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:25]
+WARNING: [Synth 8-6014] Unused sequential element clk_div_cnt_reg was removed.  [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element clk_variable_reg was removed.  [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:120]
+WARNING: [Synth 8-3848] Net led in module/entity top_module does not have driver. [C:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:29]
 WARNING: [Synth 8-7129] Port rgb[1] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rgb[0] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port led[3] in module top_module is either unconnected or has no load
@@ -74,61 +83,56 @@ WARNING: [Synth 8-7129] Port led[0] in module top_module is either unconnected o
 WARNING: [Synth 8-7129] Port btn[1] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[0] in module top_module is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1389.562 ; gain = 608.852
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1293.793 ; gain = 504.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1389.562 ; gain = 608.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1293.793 ; gain = 504.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1389.562 ; gain = 608.852
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1293.793 ; gain = 504.844
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1389.562 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1293.793 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
-Finished Parsing XDC File [D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
+Parsing XDC File [c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz/clock_gen_24MHz_in_context.xdc] for cell 'nolabel_line83'
+Finished Parsing XDC File [c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz/clock_gen_24MHz_in_context.xdc] for cell 'nolabel_line83'
+Parsing XDC File [C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
+Finished Parsing XDC File [C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1998.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1338.164 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.361 . Memory (MB): peak = 1998.520 ; gain = 0.000
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/vivado_tool/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1338.164 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/vivado_tool/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1338.164 ; gain = 549.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25csga225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1338.164 ; gain = 549.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz/clock_gen_24MHz_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz/clock_gen_24MHz_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for nolabel_line83. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 2000.418 ; gain = 1219.707
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Preparing Guide Design
----------------------------------------------------------------------------------
-got a mismatch inv_chain
-got a mismatch nor_chain
-WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 2000.418 ; gain = 1219.707
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1338.164 ; gain = 549.215
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
@@ -161,18 +165,8 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'top_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1338.164 ; gain = 549.215
 ---------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -187,7 +181,7 @@ Detailed RTL Component Info :
 	               15 Bit    Registers := 2     
 	                8 Bit    Registers := 3     
 	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   5 Input   16 Bit        Muxes := 2     
 	   2 Input   15 Bit        Muxes := 3     
@@ -201,7 +195,7 @@ Detailed RTL Component Info :
 	   5 Input    3 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 4     
 	   3 Input    1 Bit        Muxes := 3     
 	   4 Input    1 Bit        Muxes := 6     
 	   5 Input    1 Bit        Muxes := 4     
@@ -220,6 +214,7 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port rgb[1] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rgb[0] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port led[3] in module top_module is either unconnected or has no load
@@ -229,25 +224,25 @@ WARNING: [Synth 8-7129] Port led[0] in module top_module is either unconnected o
 WARNING: [Synth 8-7129] Port btn[1] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[0] in module top_module is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:07 ; elapsed = 00:04:40 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1338.164 ; gain = 549.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:18 ; elapsed = 00:04:51 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1338.164 ; gain = 549.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:34 ; elapsed = 00:05:07 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1370.441 ; gain = 581.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:31 ; elapsed = 00:06:20 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:03 . Memory (MB): peak = 1377.164 ; gain = 588.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -265,90 +260,92 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:45 ; elapsed = 00:06:42 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:10 . Memory (MB): peak = 1377.164 ; gain = 588.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:45 ; elapsed = 00:06:42 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:10 . Memory (MB): peak = 1377.164 ; gain = 588.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:46 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:10 . Memory (MB): peak = 1377.164 ; gain = 588.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:46 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:10 . Memory (MB): peak = 1377.164 ; gain = 588.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:47 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1377.164 ; gain = 588.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:47 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1377.164 ; gain = 588.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |clock_gen_24MHz |         1|
++------+----------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    12|
-|3     |LUT1   |  8007|
-|4     |LUT2   |    19|
-|5     |LUT3   |    17|
-|6     |LUT4   |    23|
-|7     |LUT5   |    20|
-|8     |LUT6   |  1090|
-|9     |MUXF7  |   532|
-|10    |MUXF8  |   261|
-|11    |FDRE   |   139|
-|12    |FDSE   |     5|
-|13    |IBUF   |     2|
-|14    |OBUF   |     7|
-|15    |OBUFT  |     6|
-+------+-------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |clock_gen_24MHz |     1|
+|2     |CARRY4          |     8|
+|3     |LUT1            |  1006|
+|4     |LUT2            |    24|
+|5     |LUT3            |    14|
+|6     |LUT4            |    22|
+|7     |LUT5            |    21|
+|8     |LUT6            |   151|
+|9     |MUXF7           |    66|
+|10    |MUXF8           |    25|
+|11    |FDRE            |    77|
+|12    |FDSE            |    15|
+|13    |IBUF            |     1|
+|14    |OBUF            |     8|
+|15    |OBUFT           |     6|
++------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:47 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1377.164 ; gain = 588.215
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:05:13 ; elapsed = 00:06:26 . Memory (MB): peak = 2000.418 ; gain = 608.852
-Synthesis Optimization Complete : Time (s): cpu = 00:05:47 ; elapsed = 00:06:47 . Memory (MB): peak = 2000.418 ; gain = 1219.707
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:07 . Memory (MB): peak = 1377.164 ; gain = 543.844
+Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:11 . Memory (MB): peak = 1377.164 ; gain = 588.215
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 2000.418 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 805 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1377.164 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2000.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1383.660 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: d910577a
+Synth Design complete, checksum: a6b15e21
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+65 Infos, 21 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:55 ; elapsed = 00:07:01 . Memory (MB): peak = 2000.418 ; gain = 1579.105
-INFO: [Common 17-1381] The checkpoint 'D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2000.418 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:19 . Memory (MB): peak = 1383.660 ; gain = 956.328
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 21 23:21:13 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 23 15:37:43 2023...

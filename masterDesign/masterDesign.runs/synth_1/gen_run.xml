@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s25csga225-1" LaunchTime="1677017626" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/nor_pair.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s25csga225-1" LaunchTime="1677162966" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/nor_pair.dcp">
   <File Type="PA-TCL" Name="top_module.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_module_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_module_reports.tcl"/>
@@ -132,4 +132,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clock_gen_24MHz"/>
 </GenRun>

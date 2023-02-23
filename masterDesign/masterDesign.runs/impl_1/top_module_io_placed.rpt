@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date                      : Tue Feb 21 23:29:07 2023
-| Host                      : DESKTOP-VEN7OOV running 64-bit major release  (build 9200)
+| Date                      : Thu Feb 23 15:42:11 2023
+| Host                      : DESKTOP-ROSU00D running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_module_io_placed.rpt
 | Design                    : top_module
 | Device                    : xc7s25
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            17 |
+|            18 |
 +---------------+
 
 
@@ -53,7 +53,7 @@ Table of Contents
 | B1         |             | High Range | IO_L4N_T0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B2         |             | High Range | IO_L2P_T0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B3         |             | High Range | IO_L3N_T0_DQS_34             | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| B4         |             | High Range | IO_L3P_T0_DQS_34             | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| B4         | pio46       | High Range | IO_L3P_T0_DQS_34             | OUTPUT      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | B5         |             | High Range | IO_L5N_T0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B6         |             | High Range | IO_L3P_T0_DQS_AD1P_15        | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B7         |             | High Range | VCCO_15                      | VCCO        |             |      15 |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |

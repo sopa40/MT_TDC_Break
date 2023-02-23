@@ -1,0 +1,3 @@
+clock_gen_24MHz_clk_wiz.v,verilog,xil_defaultlib,../../../../masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+clock_gen_24MHz.v,verilog,xil_defaultlib,../../../../masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -8,7 +8,7 @@ MIN_DELAY_UNITS = 4
 MAX_DELAY_UNITS = 4000
 
 # change com port to the corresponding one on your machine
-ser = serial.Serial("com4",9600,timeout=0.25)
+ser = serial.Serial("com6",9600,timeout=0.25)
 if ser.isOpen() == False:
     ser.open()
     

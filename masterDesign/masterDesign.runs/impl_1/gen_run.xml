@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s25csga225-1" LaunchTime="1677017626">
+<GenRun Id="impl_1" LaunchPart="xc7s25csga225-1" LaunchTime="1677162966">
   <File Type="ROUTE-PWR" Name="top_module_power_routed.rpt"/>
   <File Type="PA-TCL" Name="top_module.tcl"/>
   <File Type="BITSTR-MMI" Name="top_module.mmi"/>
@@ -210,4 +210,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clock_gen_24MHz"/>
 </GenRun>
