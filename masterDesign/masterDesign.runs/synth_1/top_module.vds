@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Feb  5 23:03:08 2023
-# Process ID: 11900
+# Start of session at: Tue Feb 21 23:13:50 2023
+# Process ID: 29972
 # Current directory: D:/vivado_pj/masterDesign/masterDesign.runs/synth_1
 # Command line: vivado.exe -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
 # Log file: D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.vds
@@ -11,7 +11,7 @@
 # Running On: DESKTOP-VEN7OOV, OS: Windows, CPU Frequency: 3408 MHz, CPU Physical cores: 4, Host memory: 17132 MB
 #-----------------------------------------------------------
 source top_module.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.035 ; gain = 69.406
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 395.137 ; gain = 72.734
 Command: read_checkpoint -auto_incremental -incremental D:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -22,19 +22,19 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Device 21-403] Loading part xc7s25csga225-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21848
+INFO: [Synth 8-7075] Helper process launched with PID 21824
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/vivado_tool/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1187.262 ; gain = 407.652
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1188.715 ; gain = 408.004
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_module' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:25]
 INFO: [Synth 8-6157] synthesizing module 'dff' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv:4]
 INFO: [Synth 8-6155] done synthesizing module 'dff' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'delay_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv:3]
-	Parameter INV_DELAY_LEN_INPUT bound to: 200 - type: integer 
-	Parameter NOR_DELAY_LEN_INPUT bound to: 20 - type: integer 
+	Parameter INV_DELAY_LEN_INPUT bound to: 4000 - type: integer 
+	Parameter NOR_DELAY_LEN_INPUT bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'inv_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:17]
-	Parameter INV_DELAY_LEN bound to: 200 - type: integer 
+	Parameter INV_DELAY_LEN bound to: 4000 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'inv_pair' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'inv_gate' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
 INFO: [Synth 8-6155] done synthesizing module 'inv_gate' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:7]
@@ -43,7 +43,7 @@ INFO: [Synth 8-6155] done synthesizing module 'inv_gate' (0#1) [D:/vivado_pj/mas
 INFO: [Synth 8-6155] done synthesizing module 'inv_pair' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'inv_chain' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv:17]
 INFO: [Synth 8-6157] synthesizing module 'nor_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:20]
-	Parameter NOR_DELAY_LEN bound to: 20 - type: integer 
+	Parameter NOR_DELAY_LEN bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'nor_pair' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'nor_gate' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
 INFO: [Synth 8-6155] done synthesizing module 'nor_gate' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:7]
@@ -52,10 +52,10 @@ INFO: [Synth 8-6155] done synthesizing module 'nor_gate' (0#1) [D:/vivado_pj/mas
 INFO: [Synth 8-6155] done synthesizing module 'nor_pair' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'nor_chain' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv:20]
 INFO: [Synth 8-6157] synthesizing module 'generic_mux' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv:5]
-	Parameter NUMBER bound to: 220 - type: integer 
+	Parameter NUMBER bound to: 4004 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'generic_mux' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv:5]
 INFO: [Synth 8-6155] done synthesizing module 'delay_chain' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv:3]
-WARNING: [Synth 8-689] width (16) of port connection 'sel' does not match port width (8) of module 'delay_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:91]
+WARNING: [Synth 8-689] width (16) of port connection 'sel' does not match port width (12) of module 'delay_chain' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:91]
 INFO: [Synth 8-6157] synthesizing module 'xor_gate' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'xor_gate' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'uart_rx' [D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv:5]
@@ -75,18 +75,18 @@ WARNING: [Synth 8-7129] Port led[0] in module top_module is either unconnected o
 WARNING: [Synth 8-7129] Port btn[1] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[0] in module top_module is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1363.957 ; gain = 584.348
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1389.562 ; gain = 608.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1363.957 ; gain = 584.348
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1389.562 ; gain = 608.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1363.957 ; gain = 584.348
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1389.562 ; gain = 608.852
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1370.746 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1389.562 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -97,99 +97,115 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1940.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1998.520 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.342 . Memory (MB): peak = 1940.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.361 . Memory (MB): peak = 1998.520 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/vivado_tool/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25csga225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Preparing Guide Design
 ---------------------------------------------------------------------------------
+got a mismatch inv_chain
+got a mismatch nor_chain
+WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
 ---------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1942.324 ; gain = 1162.715
----------------------------------------------------------------------------------
-top_module__GB4top_module__GB3top_module__GB2top_module__GB1---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1942.324 ; gain = 1162.715
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Doing Graph Differ : Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Mimic Skeleton from Reference
+Finished Preparing Guide Design : Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'top_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE0 |                              010 |                               01
+                 iSTATE1 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+                  iSTATE |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 | 00000000000000000000000000000000
+          RCV_FIRST_BYTE |                              001 | 00000000000000000000000000000001
+         RCV_SECOND_BYTE |                              010 | 00000000000000000000000000000010
+                    RCVD |                              011 | 00000000000000000000000000000011
+                SET_DONE |                              100 | 00000000000000000000000000000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'top_module'
 ---------------------------------------------------------------------------------
-Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 
 
 Incremental Synthesis Report Summary:
 
-1. Incremental synthesis run: yes
+1. Incremental synthesis run: no
 
-   Stitch points used : changed
-
-
-2. Change Summary
-
-Report Incremental Modules: 
-+------+----------------+------------+----------+----------+
-|      |Changed Modules |Replication |Instances |Changed % |
-+------+----------------+------------+----------+----------+
-|1     |inv_pair        |         200|         0|    0.0000|
-+------+----------------+------------+----------+----------+
+   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
 
 
-   Full Design Size (number of cells) : 301401
-   Resynthesis Design Size (number of cells) : 180016
-   Resynth % : 59.7264,  Reuse % : 40.2736
-
-3. Reference Checkpoint Information
-
-+---------------------------------------------------------------------------------------------------+
-| DCP Location:  | D:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp |
-+---------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------+------------------------------+
-|         DCP Information        |             Value            |
-+--------------------------------+------------------------------+
-| Vivado Version                 |                    v2022.2 |
-| DCP State                      |                              |
-+--------------------------------+------------------------------+
-
-
-
-Report RTL Partitions: 
-+------+------------------------+------------+----------+
-|      |RTL Partition           |Replication |Instances |
-+------+------------------------+------------+----------+
-|1     |counter_top_module      |           1|    180016|
-|2     |top_module__GB1_#REUSE# |           1|         0|
-|3     |top_module__GB2_#REUSE# |           1|         0|
-|4     |top_module__GB3_#REUSE# |           1|         0|
-|5     |top_module__GB4_#REUSE# |           1|         0|
-+------+------------------------+------------+----------+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   15 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   5 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 3     
+	   3 Input   15 Bit        Muxes := 1     
+	   4 Input   15 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -214,39 +230,25 @@ WARNING: [Synth 8-7129] Port led[0] in module top_module is either unconnected o
 WARNING: [Synth 8-7129] Port btn[1] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[0] in module top_module is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:11 . Memory (MB): peak = 1942.324 ; gain = 1162.715
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Stitch Unchanged AreaOpt Partitions
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:07 ; elapsed = 00:04:40 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:20 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:18 ; elapsed = 00:04:51 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:23 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Timing Optimization : Time (s): cpu = 00:04:34 ; elapsed = 00:05:07 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:26 . Memory (MB): peak = 1942.324 ; gain = 1162.715
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Stitch Unchanged Partitions
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Stitch Unchanged Partitions : Time (s): cpu = 00:01:00 ; elapsed = 00:01:27 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Technology Mapping : Time (s): cpu = 00:05:31 ; elapsed = 00:06:20 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -264,37 +266,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:35 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished IO Insertion : Time (s): cpu = 00:05:45 ; elapsed = 00:06:42 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:35 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:45 ; elapsed = 00:06:42 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:35 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:46 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:35 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:46 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:35 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:47 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:35 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:47 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -312,41 +314,42 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    12|
-|3     |LUT1   |   403|
-|4     |LUT2   |    21|
-|5     |LUT3   |    14|
-|6     |LUT4   |    16|
-|7     |LUT5   |    21|
-|8     |LUT6   |    75|
-|9     |MUXF7  |    26|
-|10    |MUXF8  |    13|
-|11    |FDRE   |    96|
-|12    |FDSE   |    13|
+|3     |LUT1   |  8007|
+|4     |LUT2   |    19|
+|5     |LUT3   |    17|
+|6     |LUT4   |    23|
+|7     |LUT5   |    20|
+|8     |LUT6   |  1090|
+|9     |MUXF7  |   532|
+|10    |MUXF8  |   261|
+|11    |FDRE   |   139|
+|12    |FDSE   |     5|
 |13    |IBUF   |     2|
 |14    |OBUF   |     7|
 |15    |OBUFT  |     6|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:35 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:47 ; elapsed = 00:06:44 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:01:17 . Memory (MB): peak = 1942.324 ; gain = 584.348
-Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:36 . Memory (MB): peak = 1942.324 ; gain = 1162.715
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:13 ; elapsed = 00:06:26 . Memory (MB): peak = 2000.418 ; gain = 608.852
+Synthesis Optimization Complete : Time (s): cpu = 00:05:47 ; elapsed = 00:06:47 . Memory (MB): peak = 2000.418 ; gain = 1219.707
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1942.324 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 2000.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 805 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1942.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2000.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 9885712a
+Synth Design complete, checksum: d910577a
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+58 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:41 . Memory (MB): peak = 1942.324 ; gain = 1520.621
+synth_design: Time (s): cpu = 00:05:55 ; elapsed = 00:07:01 . Memory (MB): peak = 2000.418 ; gain = 1579.105
 INFO: [Common 17-1381] The checkpoint 'D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2000.418 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Feb  5 23:05:01 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 21 23:21:13 2023...

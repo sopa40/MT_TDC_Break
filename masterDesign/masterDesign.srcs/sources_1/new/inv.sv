@@ -2,7 +2,7 @@
 
 module inv_pair(input a, output logic b);
 
-    logic trans;
+    (*DONT_TOUCH= "true"*) logic trans;
 
     module inv_gate(input a, output logic b);
         (*DONT_TOUCH= "true"*) assign b = ~a;
@@ -17,7 +17,7 @@ endmodule
 module inv_chain #(parameter INV_DELAY_LEN = 10)(input a, output logic [INV_DELAY_LEN - 1:0] mux_in, 
                                                             output logic b);
     
-    logic [INV_DELAY_LEN-1:0] trans;
+    (*DONT_TOUCH= "true"*) logic [INV_DELAY_LEN-1:0] trans;
     
     generate
         for (genvar i = 0; i < INV_DELAY_LEN; i = i+1) begin

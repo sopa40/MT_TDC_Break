@@ -6,11 +6,11 @@
 `endif
  
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 200
+    `define INV_DELAY_LEN 4000
 `endif
 
 `ifndef NOR_DELAY_LEN
-    `define NOR_DELAY_LEN 20
+    `define NOR_DELAY_LEN 4
 `endif
 
 `ifndef SET_LEN_START_CMD
