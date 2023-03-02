@@ -2,46 +2,46 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Feb 23 15:37:52 2023
-# Process ID: 17252
-# Current directory: C:/vivado_pj/masterDesign/masterDesign.runs/impl_1
+# Start of session at: Thu Mar  2 18:46:47 2023
+# Process ID: 24412
+# Current directory: D:/vivado_pj/masterDesign/masterDesign.runs/impl_1
 # Command line: vivado.exe -log top_module.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_module.tcl -notrace
-# Log file: C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module.vdi
-# Journal file: C:/vivado_pj/masterDesign/masterDesign.runs/impl_1\vivado.jou
-# Running On: DESKTOP-ROSU00D, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16059 MB
+# Log file: D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module.vdi
+# Journal file: D:/vivado_pj/masterDesign/masterDesign.runs/impl_1\vivado.jou
+# Running On: DESKTOP-VEN7OOV, OS: Windows, CPU Frequency: 3408 MHz, CPU Physical cores: 4, Host memory: 17132 MB
 #-----------------------------------------------------------
 source top_module.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 394.488 ; gain = 61.520
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 394.477 ; gain = 67.078
 Command: link_design -top top_module -part xc7s25csga225-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7s25csga225-1
-INFO: [Project 1-454] Reading design checkpoint 'c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.dcp' for cell 'nolabel_line83'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 806.637 ; gain = 0.000
+INFO: [Project 1-454] Reading design checkpoint 'd:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.dcp' for cell 'nolabel_line89'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 809.629 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 100 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Opt 31-35] Removing redundant IBUF, nolabel_line83/inst/clkin1_ibufg, from the path connected to top-level port: clk 
+WARNING: [Opt 31-35] Removing redundant IBUF, nolabel_line89/inst/clkin1_ibufg, from the path connected to top-level port: clk 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'nolabel_line83/clk_in' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-Parsing XDC File [c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz_board.xdc] for cell 'nolabel_line83/inst'
-Finished Parsing XDC File [c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz_board.xdc] for cell 'nolabel_line83/inst'
-Parsing XDC File [c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.xdc] for cell 'nolabel_line83/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.xdc:57]
-get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1399.367 ; gain = 477.898
-Finished Parsing XDC File [c:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.xdc] for cell 'nolabel_line83/inst'
-Parsing XDC File [C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
-Finished Parsing XDC File [C:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'nolabel_line89/clk_in' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [d:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz_board.xdc] for cell 'nolabel_line89/inst'
+Finished Parsing XDC File [d:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz_board.xdc] for cell 'nolabel_line89/inst'
+Parsing XDC File [d:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.xdc] for cell 'nolabel_line89/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.xdc:57]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1401.742 ; gain = 477.938
+Finished Parsing XDC File [d:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz.xdc] for cell 'nolabel_line89/inst'
+Parsing XDC File [D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
+Finished Parsing XDC File [D:/vivado_pj/masterDesign/masterDesign.srcs/constrs_1/new/Cmod-S7-25-Master.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1399.367 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1401.742 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 10 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1399.367 ; gain = 971.109
+link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1401.742 ; gain = 973.586
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s25'
@@ -52,59 +52,59 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1399.367 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1401.742 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1e6419438
+Ending Cache Timing Information Task | Checksum: 12ccbe8bc
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 1419.711 ; gain = 20.344
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 1421.066 ; gain = 19.324
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1e6419438
+Phase 1 Retarget | Checksum: 12ccbe8bc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.210 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.311 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Retarget, 506 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Retarget, 1506 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1e6419438
+Phase 2 Constant propagation | Checksum: 12ccbe8bc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.247 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.367 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 504 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Constant propagation, 1504 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 135d4c3f9
+Phase 3 Sweep | Checksum: 2048369df
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.277 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.399 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Sweep, 1013 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Sweep, 2013 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 135d4c3f9
+Phase 4 BUFG optimization | Checksum: 2048369df
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.365 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.448 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 135d4c3f9
+Phase 5 Shift Register Optimization | Checksum: 2048369df
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.373 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.454 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 135d4c3f9
+Phase 6 Post Processing Netlist | Checksum: 2048369df
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.413 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.509 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Post Processing Netlist, 504 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 1504 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
 
@@ -112,54 +112,54 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               0  |                                            506  |
-|  Constant propagation         |               0  |               0  |                                            504  |
-|  Sweep                        |               0  |               0  |                                           1013  |
+|  Retarget                     |               0  |               0  |                                           1506  |
+|  Constant propagation         |               0  |               0  |                                           1504  |
+|  Sweep                        |               0  |               0  |                                           2013  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                            504  |
+|  Post Processing Netlist      |               0  |               0  |                                           1504  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1e6bee6ff
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1c874fc6b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.429 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.522 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 1e6bee6ff
+Ending Power Optimization Task | Checksum: 1c874fc6b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 1e6bee6ff
+Ending Final Cleanup Task | Checksum: 1c874fc6b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 1e6bee6ff
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1c874fc6b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 31 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1746.656 ; gain = 347.289
+opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1744.250 ; gain = 342.508
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1746.656 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_opt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1744.250 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_module_drc_opted.rpt -pb top_module_drc_opted.pb -rpx top_module_drc_opted.rpx
 Command: report_drc -file top_module_drc_opted.rpt -pb top_module_drc_opted.pb -rpx top_module_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_drc_opted.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_drc_opted.rpt.
 report_drc completed successfully
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s25'
@@ -178,54 +178,54 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1744.250 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1abc9ed65
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 19eb331a7
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.297 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.290 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 2081575de
+Phase 1.3 Build Placer Netlist Model | Checksum: 262b67a95
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.799 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.851 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 2081575de
+Phase 1.4 Constrain Clocks/Macros | Checksum: 262b67a95
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.803 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 2081575de
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.855 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 262b67a95
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.809 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.859 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 264d0e51b
+Phase 2.1 Floorplanning | Checksum: 245a98234
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 27063d51a
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 2984048ef
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 27063d51a
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 2984048ef
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 2371ec0ab
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 22d348c96
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 2.4.2 Physical Synthesis In Placer
 INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 4 LUT instances to create LUTNM shape
@@ -246,7 +246,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -268,65 +268,65 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 268866bb0
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 24eebee15
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 19c41419a
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 179eb582f
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 19c41419a
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 179eb582f
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 25552b74a
+Phase 3.1 Commit Multi Column Macros | Checksum: 1eade5c61
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 23ade06c9
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 214b6ccd7
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 290c0d88d
+Phase 3.3 Area Swap Optimization | Checksum: 1e4c44f4b
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 22a9aa57a
+Phase 3.4 Pipeline Register Optimization | Checksum: 1fed6bc5c
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 19454aeb6
+Phase 3.5 Fast Optimization | Checksum: 15a15c8ac
 
-Time (s): cpu = 00:02:07 ; elapsed = 00:02:08 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 1d0ad47fe
+Phase 3.6 Small Shape Detail Placement | Checksum: 16129724c
 
-Time (s): cpu = 00:02:08 ; elapsed = 00:02:08 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:05 ; elapsed = 00:01:04 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 21ec4ca70
+Phase 3.7 Re-assign LUT pins | Checksum: 17eb19f03
 
-Time (s): cpu = 00:02:08 ; elapsed = 00:02:08 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:05 ; elapsed = 00:01:05 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 204873fa3
+Phase 3.8 Pipeline Register Optimization | Checksum: 198b3ec36
 
-Time (s): cpu = 00:02:08 ; elapsed = 00:02:08 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:05 ; elapsed = 00:01:05 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 2671b80d5
+Phase 3.9 Fast Optimization | Checksum: d9cfe967
 
-Time (s): cpu = 00:03:11 ; elapsed = 00:03:13 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 2671b80d5
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: d9cfe967
 
-Time (s): cpu = 00:03:11 ; elapsed = 00:03:13 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -334,7 +334,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 2805fc459
+Post Placement Optimization Initialization | Checksum: 1b077bad0
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -342,33 +342,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-476.604 | TNS=-476.604 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1df0083e3
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-491.639 | TNS=-491.639 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1abd39a82
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1d8d48f32
+Ending Physical Synthesis Task | Checksum: ff8599e2
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 2805fc459
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1b077bad0
 
-Time (s): cpu = 00:03:12 ; elapsed = 00:03:14 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:36 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-458.050. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1f6d25877
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-477.959. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 23a569fec
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 1f6d25877
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 23a569fec
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1f6d25877
+Phase 4.2 Post Placement Cleanup | Checksum: 23a569fec
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -387,96 +387,90 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 1f6d25877
+Phase 4.3.1 Print Estimated Congestion | Checksum: 23a569fec
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 1f6d25877
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 23a569fec
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 175cf564c
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1b9539dc1
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
-Ending Placer Task | Checksum: fa6331ec
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
+Ending Placer Task | Checksum: e2a1b061
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:03:32 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 71 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:03:28 ; elapsed = 00:03:33 . Memory (MB): peak = 1746.656 ; gain = 0.000
+place_design: Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.266 . Memory (MB): peak = 1746.656 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_placed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.204 . Memory (MB): peak = 1744.250 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file top_module_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1746.656 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1744.250 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_placed.rpt -pb top_module_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_module_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1746.656 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1744.250 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s25'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.179 . Memory (MB): peak = 1746.656 ; gain = 0.000
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 0.00s |  WALL: 0.21s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.179 . Memory (MB): peak = 1744.250 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 0.00s |  WALL: 0.20s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-458.049 | TNS=-458.049 |
-Phase 1 Physical Synthesis Initialization | Checksum: ced1c737
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.959 | TNS=-477.959 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1337d2cd5
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.247 . Memory (MB): peak = 1746.656 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-458.049 | TNS=-458.049 |
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.162 . Memory (MB): peak = 1744.250 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.959 | TNS=-477.959 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: ced1c737
+Phase 2 DSP Register Optimization | Checksum: 1337d2cd5
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.260 . Memory (MB): peak = 1746.656 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.170 . Memory (MB): peak = 1744.250 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-458.049 | TNS=-458.049 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.959 | TNS=-477.959 |
 INFO: [Physopt 32-702] Processed net capture_dff/pio16_OBUF. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net nolabel_line83/inst/clk_out_clock_gen_24MHz. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net nolabel_line89/inst/clk_out_clock_gen_24MHz. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio9_OBUF_inst_i_2_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-710] Processed net delay/inv_delay_line/pio9_OBUF_inst_i_2_n_0. Critical path length was reduced through logic transformation on cell delay/inv_delay_line/pio9_OBUF_inst_i_2_comp.
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/pio9_OBUF_inst_i_6_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-457.453 | TNS=-457.453 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.792 | TNS=-477.792 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio9_OBUF_inst_i_16_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/sel_reg[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/nor_delay_line/genblk1[3].nor_pair_unit/b.  Re-placed instance delay/nor_delay_line/genblk1[3].nor_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/nor_delay_line/genblk1[3].nor_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.765 | TNS=-477.765 |
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[3].nor_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/nor_delay_line/genblk1[3].nor_pair_unit/trans.  Re-placed instance delay/nor_delay_line/genblk1[3].nor_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/nor_delay_line/genblk1[3].nor_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-457.378 | TNS=-457.378 |
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[3].nor_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/nor_delay_line/genblk1[2].nor_pair_unit/b.  Re-placed instance delay/nor_delay_line/genblk1[2].nor_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/nor_delay_line/genblk1[2].nor_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.739 | TNS=-477.739 |
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[2].nor_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[2].nor_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/nor_delay_line/genblk1[1].nor_pair_unit/b.  Re-placed instance delay/nor_delay_line/genblk1[1].nor_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/nor_delay_line/genblk1[1].nor_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-457.351 | TNS=-457.351 |
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[1].nor_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/nor_delay_line/genblk1[1].nor_pair_unit/trans.  Re-placed instance delay/nor_delay_line/genblk1[1].nor_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/nor_delay_line/genblk1[1].nor_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-457.270 | TNS=-457.270 |
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[1].nor_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[0].nor_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[0].nor_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[499].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[499].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[499].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[499].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-457.169 | TNS=-457.169 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[499].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[498].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[498].inv_pair_unit/trans. Optimizations did not improve timing on the net.
@@ -511,13 +505,25 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[484].inv_pair_
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[483].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[483].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[482].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[482].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[482].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[482].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.731 | TNS=-477.731 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[482].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[481].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[481].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[480].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[480].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[480].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.532 | TNS=-477.532 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[480].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[480].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[479].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[479].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[479].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[479].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.491 | TNS=-477.491 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[479].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[478].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[478].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[478].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-477.022 | TNS=-477.022 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[478].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[478].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[477].inv_pair_unit/b. Optimizations did not improve timing on the net.
@@ -527,7 +533,13 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[476].inv_pair_
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[475].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[475].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[474].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[474].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[474].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[474].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-476.785 | TNS=-476.785 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[474].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[473].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[473].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[473].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-476.604 | TNS=-476.604 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[473].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[473].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[472].inv_pair_unit/b. Optimizations did not improve timing on the net.
@@ -547,28 +559,25 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[466].inv_pair_
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[465].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[465].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[464].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[464].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[464].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[464].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-476.558 | TNS=-476.558 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[464].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[463].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[463].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[463].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-476.519 | TNS=-476.519 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[463].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[463].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[462].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[462].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[461].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[461].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[461].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[461].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-457.131 | TNS=-457.131 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[461].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[460].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[460].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[459].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[459].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[458].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[458].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[458].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-457.081 | TNS=-457.081 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[458].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[458].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[457].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[457].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[457].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-457.071 | TNS=-457.071 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[457].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[457].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[456].inv_pair_unit/b. Optimizations did not improve timing on the net.
@@ -578,26 +587,11 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[455].inv_pair_
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[454].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[454].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[453].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[453].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[453].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[453].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.889 | TNS=-456.889 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[453].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[452].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[452].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[452].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.833 | TNS=-456.833 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[452].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[452].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[452].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[452].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.681 | TNS=-456.681 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[452].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[451].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[451].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[451].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.486 | TNS=-456.486 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[451].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[451].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[450].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[450].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[450].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.469 | TNS=-456.469 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[450].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[450].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[449].inv_pair_unit/b. Optimizations did not improve timing on the net.
@@ -608,454 +602,372 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[447].inv_pair_
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[447].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[446].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[446].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[445].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[445].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[445].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.356 | TNS=-456.356 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[445].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[445].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[445].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[445].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.239 | TNS=-456.239 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[445].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[444].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[444].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[444].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.176 | TNS=-456.176 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[444].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[444].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[444].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[444].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-456.124 | TNS=-456.124 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[444].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[443].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[443].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[443].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.986 | TNS=-455.986 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[443].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[443].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[442].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[442].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[441].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[441].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[440].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[440].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[440].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.889 | TNS=-455.889 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[440].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[440].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[440].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[440].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.587 | TNS=-455.587 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[440].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[439].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[439].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[439].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.512 | TNS=-455.512 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[439].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[439].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[439].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[439].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.431 | TNS=-455.431 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-476.382 | TNS=-476.382 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[439].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[438].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[438].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[438].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.374 | TNS=-455.374 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-476.310 | TNS=-476.310 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[438].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[438].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[438].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[438].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.227 | TNS=-455.227 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-475.981 | TNS=-475.981 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[438].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[437].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[437].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[437].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.179 | TNS=-455.179 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-475.515 | TNS=-475.515 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[437].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[437].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[436].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[436].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[436].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.144 | TNS=-455.144 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[436].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[436].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[436].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[436].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-455.012 | TNS=-455.012 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[436].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[435].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[435].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[435].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-454.683 | TNS=-454.683 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[435].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[435].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[434].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[434].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[434].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[434].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-454.498 | TNS=-454.498 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[434].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[433].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[433].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[433].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-454.304 | TNS=-454.304 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-475.328 | TNS=-475.328 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[433].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[433].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[433].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[433].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-454.112 | TNS=-454.112 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[433].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[432].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[432].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[432].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[432].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-453.916 | TNS=-453.916 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[432].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[431].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[431].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[431].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-453.637 | TNS=-453.637 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[431].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[431].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[430].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[430].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[430].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[430].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-453.558 | TNS=-453.558 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[430].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[429].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[429].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[429].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-453.401 | TNS=-453.401 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[429].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[429].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[429].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[429].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-453.127 | TNS=-453.127 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[429].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[428].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[428].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[428].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[428].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-453.074 | TNS=-453.074 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[428].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[427].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[427].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[427].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-452.745 | TNS=-452.745 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[427].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[427].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[426].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[426].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[426].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-452.655 | TNS=-452.655 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-475.222 | TNS=-475.222 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[426].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[426].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[426].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[426].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-452.611 | TNS=-452.611 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-475.179 | TNS=-475.179 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[426].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[425].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[425].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[425].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-474.713 | TNS=-474.713 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[425].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[425].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[424].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[424].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[424].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-452.574 | TNS=-452.574 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[424].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[424].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[424].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[424].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-452.403 | TNS=-452.403 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[424].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[423].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[423].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[423].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-452.393 | TNS=-452.393 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[423].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[423].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[423].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[423].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-452.282 | TNS=-452.282 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[423].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[422].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[422].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[422].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-474.615 | TNS=-474.615 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[422].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[422].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[422].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[422].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-451.997 | TNS=-451.997 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[422].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[421].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[421].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[420].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[420].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[420].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-451.802 | TNS=-451.802 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-474.381 | TNS=-474.381 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[420].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[420].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[419].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[419].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[419].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-474.284 | TNS=-474.284 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[419].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[419].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[419].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[419].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-474.231 | TNS=-474.231 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[419].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[418].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[418].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[418].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[418].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-451.559 | TNS=-451.559 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[418].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[417].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[417].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[417].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-451.235 | TNS=-451.235 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[417].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[417].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[416].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[416].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[416].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-451.096 | TNS=-451.096 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[416].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[416].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[416].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[416].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-450.937 | TNS=-450.937 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[416].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[415].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[415].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[415].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[415].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-450.881 | TNS=-450.881 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-473.844 | TNS=-473.844 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[415].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[414].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[414].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[413].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[413].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[412].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[412].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[412].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[412].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-473.691 | TNS=-473.691 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[412].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[411].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[411].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[411].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-450.656 | TNS=-450.656 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[411].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[411].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[410].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[410].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[410].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[410].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-473.370 | TNS=-473.370 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[410].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[409].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[409].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[409].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[409].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-450.527 | TNS=-450.527 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-473.042 | TNS=-473.042 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[409].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[408].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[408].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[407].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[407].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[407].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-450.339 | TNS=-450.339 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[407].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[407].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[407].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[407].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-472.941 | TNS=-472.941 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[407].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[406].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[406].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[406].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-450.146 | TNS=-450.146 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[406].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[406].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[405].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[405].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[405].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-449.825 | TNS=-449.825 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[405].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[405].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[404].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[404].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[404].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[404].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-449.691 | TNS=-449.691 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[404].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[403].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[403].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[403].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-449.378 | TNS=-449.378 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[403].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[403].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[402].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[402].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[402].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-449.288 | TNS=-449.288 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-472.724 | TNS=-472.724 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[402].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[402].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[402].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[402].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-449.235 | TNS=-449.235 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[402].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[401].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[401].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[400].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[400].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[400].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-448.851 | TNS=-448.851 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-472.520 | TNS=-472.520 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[400].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[400].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[399].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[399].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[399].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[399].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-472.474 | TNS=-472.474 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[399].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[398].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[398].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[398].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-448.663 | TNS=-448.663 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[398].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[398].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[398].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[398].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-448.639 | TNS=-448.639 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-472.286 | TNS=-472.286 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[398].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[397].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[397].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[397].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-472.003 | TNS=-472.003 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[397].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[397].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[396].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[396].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[396].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-448.391 | TNS=-448.391 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[396].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[396].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[395].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[395].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[395].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[395].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-448.290 | TNS=-448.290 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[395].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[394].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[394].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[394].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-447.826 | TNS=-447.826 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[394].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[394].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[394].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[394].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-471.880 | TNS=-471.880 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[394].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[393].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[393].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[392].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[392].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[392].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-471.509 | TNS=-471.509 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[392].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[392].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[391].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[391].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[391].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-447.816 | TNS=-447.816 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-471.437 | TNS=-471.437 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[391].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[391].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[391].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[391].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-447.640 | TNS=-447.640 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[391].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[390].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[390].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[390].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-447.311 | TNS=-447.311 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[390].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[390].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[390].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[390].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-471.276 | TNS=-471.276 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[390].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[389].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[389].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[389].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-446.926 | TNS=-446.926 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-470.905 | TNS=-470.905 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[389].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[389].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[389].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[389].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-446.918 | TNS=-446.918 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[389].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[388].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[388].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[388].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-446.639 | TNS=-446.639 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-470.761 | TNS=-470.761 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[388].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[388].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[387].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[387].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[387].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-446.459 | TNS=-446.459 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[387].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[387].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[387].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[387].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-470.720 | TNS=-470.720 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[387].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[386].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[386].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[386].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-446.322 | TNS=-446.322 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-470.251 | TNS=-470.251 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[386].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[386].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[386].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[386].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-446.266 | TNS=-446.266 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-470.128 | TNS=-470.128 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[386].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[385].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[385].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[385].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-445.942 | TNS=-445.942 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[385].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[385].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[385].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[385].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-445.895 | TNS=-445.895 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[385].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[384].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[384].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[384].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-445.837 | TNS=-445.837 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[384].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[384].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[384].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[384].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-445.489 | TNS=-445.489 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[384].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[383].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[383].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[383].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-445.477 | TNS=-445.477 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[383].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[383].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[383].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[383].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-445.433 | TNS=-445.433 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[383].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[382].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[382].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[382].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[382].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-445.303 | TNS=-445.303 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[382].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[381].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[381].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[381].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[381].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-445.120 | TNS=-445.120 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[381].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[380].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[380].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[380].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-444.934 | TNS=-444.934 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[380].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[380].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[380].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[380].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-444.893 | TNS=-444.893 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[380].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[379].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[379].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[378].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[378].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[378].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-444.734 | TNS=-444.734 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[378].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[378].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[378].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[378].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-469.933 | TNS=-469.933 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[378].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[377].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[377].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[377].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[377].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-444.619 | TNS=-444.619 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[377].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[376].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[376].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[376].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-444.476 | TNS=-444.476 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-469.686 | TNS=-469.686 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[376].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[376].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[376].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[376].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-444.316 | TNS=-444.316 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[376].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[375].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[375].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[375].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-444.190 | TNS=-444.190 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[375].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[375].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[375].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[375].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-444.154 | TNS=-444.154 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-469.645 | TNS=-469.645 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[375].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[374].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[374].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[374].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-443.686 | TNS=-443.686 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-469.165 | TNS=-469.165 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[374].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[374].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[373].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[373].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[373].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-443.507 | TNS=-443.507 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[373].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[373].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[373].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[373].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-469.053 | TNS=-469.053 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[373].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[372].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[372].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[372].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-468.752 | TNS=-468.752 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[372].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[372].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[371].inv_pair_unit/b. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[371].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[371].inv_pair_unit/trans_inferred_i_1
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[371].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-443.304 | TNS=-443.304 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[371].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[370].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[370].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[370].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-443.294 | TNS=-443.294 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-468.526 | TNS=-468.526 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[370].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[370].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[370].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[370].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-443.235 | TNS=-443.235 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-468.363 | TNS=-468.363 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[370].inv_pair_unit/trans. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[369].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[369].inv_pair_unit/b_INST_0
-INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[369].inv_pair_unit/b. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-443.127 | TNS=-443.127 |
-INFO: [Common 17-14] Message 'Physopt 32-619' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[369].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[369].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[369].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[369].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-468.180 | TNS=-468.180 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[369].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[368].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[368].inv_pair_unit/b_INST_0
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[368].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-467.994 | TNS=-467.994 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[368].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[368].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[368].inv_pair_unit/trans_inferred_i_1
 INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[368].inv_pair_unit/trans. Optimization improves timing on the net.
-INFO: [Common 17-14] Message 'Physopt 32-735' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-467.947 | TNS=-467.947 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[368].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[367].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[367].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[367].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-467.889 | TNS=-467.889 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[367].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[367].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[367].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[367].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-467.541 | TNS=-467.541 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[367].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[366].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[366].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[366].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-467.267 | TNS=-467.267 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[366].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[366].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[366].inv_pair_unit/trans_inferred_i_1
-INFO: [Common 17-14] Message 'Physopt 32-663' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[366].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-467.260 | TNS=-467.260 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[366].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[365].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[365].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[365].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-467.254 | TNS=-467.254 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[365].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[365].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[365].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[365].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-466.934 | TNS=-466.934 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[365].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[364].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[364].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[364].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-466.605 | TNS=-466.605 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[364].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[364].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[363].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[363].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[362].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[362].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[362].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[362].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-466.504 | TNS=-466.504 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[362].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[361].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[361].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[361].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-466.040 | TNS=-466.040 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[361].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[361].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[360].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[360].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[360].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-465.863 | TNS=-465.863 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[360].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[360].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[360].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[360].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-465.581 | TNS=-465.581 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[360].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[359].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[359].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[359].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[359].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-465.398 | TNS=-465.398 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[359].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[358].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[358].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[357].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[357].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[357].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[357].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-465.192 | TNS=-465.192 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[357].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[356].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[356].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[356].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-465.133 | TNS=-465.133 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[356].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[356].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[355].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[355].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[355].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[355].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-464.888 | TNS=-464.888 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[355].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[354].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[354].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[354].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-464.556 | TNS=-464.556 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[354].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[354].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[353].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[353].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[353].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[353].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-464.319 | TNS=-464.319 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[353].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[352].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[352].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[352].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-464.242 | TNS=-464.242 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[352].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[352].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[351].inv_pair_unit/b. Optimizations did not improve timing on the net.
@@ -1063,30 +975,66 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[351].inv_pair_
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[350].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[350].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[349].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[349].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[349].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[349].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-464.034 | TNS=-464.034 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[349].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[348].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[348].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[348].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-463.702 | TNS=-463.702 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[348].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[348].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[348].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[348].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-463.662 | TNS=-463.662 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[348].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[347].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[347].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[347].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[347].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-463.458 | TNS=-463.458 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[347].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[346].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[346].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[345].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[345].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[344].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[344].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[344].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[344].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-463.413 | TNS=-463.413 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[344].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[343].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[343].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[343].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-463.348 | TNS=-463.348 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[343].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[343].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[343].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[343].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-463.001 | TNS=-463.001 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[343].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[342].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[342].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[342].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-462.667 | TNS=-462.667 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[342].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[342].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[342].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[342].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-462.616 | TNS=-462.616 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[342].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[341].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[341].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[340].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[340].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[340].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-462.445 | TNS=-462.445 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[340].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[340].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[339].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[339].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[338].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[338].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[338].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-462.335 | TNS=-462.335 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[338].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[338].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[337].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[337].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[337].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[337].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-462.217 | TNS=-462.217 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[337].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[336].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[336].inv_pair_unit/trans. Optimizations did not improve timing on the net.
@@ -1094,44 +1042,96 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[335].inv_pair_
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[335].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[334].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[334].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[333].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[333].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[333].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-462.138 | TNS=-462.138 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[333].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[333].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[333].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[333].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-462.074 | TNS=-462.074 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[333].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[332].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[332].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[331].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[331].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[330].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[330].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[330].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[330].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-461.895 | TNS=-461.895 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[330].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[329].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[329].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[328].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[328].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[328].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-461.856 | TNS=-461.856 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[328].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[328].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[328].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[328].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-461.671 | TNS=-461.671 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[328].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[327].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[327].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[327].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[327].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-461.631 | TNS=-461.631 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[327].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[326].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[326].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[326].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-461.445 | TNS=-461.445 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[326].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[326].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[325].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[325].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[325].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-461.250 | TNS=-461.250 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[325].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[325].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[325].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[325].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-461.161 | TNS=-461.161 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[325].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[324].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[324].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[324].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-460.685 | TNS=-460.685 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[324].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[324].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[323].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[323].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[322].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[322].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[322].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-460.634 | TNS=-460.634 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[322].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[322].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[322].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[322].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-460.514 | TNS=-460.514 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[322].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[321].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[321].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[320].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[320].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[320].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-460.136 | TNS=-460.136 |
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[320].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[320].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[319].inv_pair_unit/b. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[319].inv_pair_unit/trans.  Re-placed instance delay/inv_delay_line/genblk1[319].inv_pair_unit/trans_inferred_i_1
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[319].inv_pair_unit/trans. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-460.081 | TNS=-460.081 |
+INFO: [Common 17-14] Message 'Physopt 32-619' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[319].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[318].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[318].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[318].inv_pair_unit/b. Optimization improves timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[318].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[318].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[317].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[317].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[317].inv_pair_unit/b. Optimization improves timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[317].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[317].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[316].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[316].inv_pair_unit/b_INST_0
+INFO: [Physopt 32-735] Processed net delay/inv_delay_line/genblk1[316].inv_pair_unit/b. Optimization improves timing on the net.
+INFO: [Common 17-14] Message 'Physopt 32-735' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[316].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[316].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[315].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[315].inv_pair_unit/trans. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net delay/inv_delay_line/genblk1[314].inv_pair_unit/b.  Re-placed instance delay/inv_delay_line/genblk1[314].inv_pair_unit/b_INST_0
+INFO: [Common 17-14] Message 'Physopt 32-663' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[314].inv_pair_unit/b. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[314].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[313].inv_pair_unit/b. Optimizations did not improve timing on the net.
@@ -1766,8 +1766,8 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio46_OBUF. Optimizati
 INFO: [Physopt 32-571] Net lauch_dff/a was not replicated.
 INFO: [Physopt 32-702] Processed net lauch_dff/a. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net capture_dff/pio16_OBUF. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net nolabel_line83/inst/clk_out_clock_gen_24MHz. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
+INFO: [Physopt 32-702] Processed net nolabel_line89/inst/clk_out_clock_gen_24MHz. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio9_OBUF_inst_i_2_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio9_OBUF_inst_i_16_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/sel_reg[1]. Optimizations did not improve timing on the net.
@@ -2781,13 +2781,13 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[0].inv_pair_un
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[0].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio46_OBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net lauch_dff/a. Optimizations did not improve timing on the net.
-Phase 3 Critical Path Optimization | Checksum: db8e1f2c
+Phase 3 Critical Path Optimization | Checksum: 1c454b26c
 
-Time (s): cpu = 00:02:27 ; elapsed = 00:02:09 . Memory (MB): peak = 1750.059 ; gain = 3.402
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:41 . Memory (MB): peak = 1746.824 ; gain = 2.574
 
 Phase 4 Critical Path Optimization
 INFO: [Physopt 32-702] Processed net capture_dff/pio16_OBUF. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net nolabel_line83/inst/clk_out_clock_gen_24MHz. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net nolabel_line89/inst/clk_out_clock_gen_24MHz. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-710] Processed net delay/inv_delay_line/pio46_OBUF. Critical path length was reduced through logic transformation on cell delay/inv_delay_line/pio46_OBUF_inst_i_1_comp.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio9_OBUF_inst_i_16_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/sel_reg[1]. Optimizations did not improve timing on the net.
@@ -3803,7 +3803,7 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio46_OBUF. Optimizati
 INFO: [Physopt 32-571] Net lauch_dff/a was not replicated.
 INFO: [Physopt 32-702] Processed net lauch_dff/a. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net capture_dff/pio16_OBUF. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net nolabel_line83/inst/clk_out_clock_gen_24MHz. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net nolabel_line89/inst/clk_out_clock_gen_24MHz. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio9_OBUF_inst_i_16_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/sel_reg[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/nor_delay_line/genblk1[3].nor_pair_unit/b. Optimizations did not improve timing on the net.
@@ -4816,11 +4816,11 @@ INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[0].inv_pair_un
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/genblk1[0].inv_pair_unit/trans. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net delay/inv_delay_line/pio46_OBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net lauch_dff/a. Optimizations did not improve timing on the net.
-Phase 4 Critical Path Optimization | Checksum: 182647849
+Phase 4 Critical Path Optimization | Checksum: 17b496bb2
 
-Time (s): cpu = 00:04:05 ; elapsed = 00:03:33 . Memory (MB): peak = 1750.059 ; gain = 3.402
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1750.059 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-359.441 | TNS=-359.441 |
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:35 . Memory (MB): peak = 1746.828 ; gain = 2.578
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1746.828 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-386.571 | TNS=-386.571 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -4830,25 +4830,25 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |         98.608  |         98.608  |            0  |              0  |                   749  |           0  |           2  |  00:03:33  |
-|  Total          |         98.608  |         98.608  |            0  |              0  |                   749  |           0  |           3  |  00:03:33  |
+|  Critical Path  |         91.388  |         91.388  |            0  |              0  |                   664  |           0  |           2  |  00:02:34  |
+|  Total          |         91.388  |         91.388  |            0  |              0  |                   664  |           0  |           3  |  00:02:34  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1750.059 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 227245db5
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1746.828 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 183b89c5e
 
-Time (s): cpu = 00:04:05 ; elapsed = 00:03:33 . Memory (MB): peak = 1750.059 ; gain = 3.402
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:35 . Memory (MB): peak = 1746.828 ; gain = 2.578
 INFO: [Common 17-83] Releasing license: Implementation
 4449 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:04:05 ; elapsed = 00:03:33 . Memory (MB): peak = 1750.059 ; gain = 3.402
+phys_opt_design: Time (s): cpu = 00:03:35 ; elapsed = 00:02:35 . Memory (MB): peak = 1746.828 ; gain = 2.578
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.373 . Memory (MB): peak = 1760.078 ; gain = 10.020
-INFO: [Common 17-1381] The checkpoint 'C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_physopt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.211 . Memory (MB): peak = 1755.523 ; gain = 8.695
+INFO: [Common 17-1381] The checkpoint 'D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s25'
@@ -4865,30 +4865,30 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: 9de1ccee ConstDB: 0 ShapeSum: 8b6e416d RouteDB: 0
-Post Restoration Checksum: NetGraph: c26a1310 NumContArr: 44fdab09 Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 10767be19
+Checksum: PlaceDB: 19c75fc8 ConstDB: 0 ShapeSum: 8b6e416d RouteDB: 0
+Post Restoration Checksum: NetGraph: df3dbe43 NumContArr: ee7b94f8 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 1cdb9533b
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1802.434 ; gain = 31.496
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1802.668 ; gain = 34.023
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 10767be19
+Phase 2.1 Fix Topology Constraints | Checksum: 1cdb9533b
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1808.492 ; gain = 37.555
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1808.680 ; gain = 40.035
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 10767be19
+Phase 2.2 Pre Route Cleanup | Checksum: 1cdb9533b
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1808.492 ; gain = 37.555
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1808.680 ; gain = 40.035
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 2074480d9
+Phase 2.3 Update Timing | Checksum: 1dadea35e
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1812.469 ; gain = 41.531
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-353.958| TNS=-353.958| WHS=-0.143 | THS=-2.303 |
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1812.652 ; gain = 44.008
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-381.089| TNS=-381.089| WHS=-0.077 | THS=-2.242 |
 
 
 Router Utilization Summary
@@ -4897,104 +4897,107 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 1210
+  Number of Failed Nets               = 2209
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 1209
+  Number of Unrouted Nets             = 2208
   Number of Partially Routed Nets     = 1
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 26e31ee38
+Phase 2 Router Initialization | Checksum: 1220aa000
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 1812.469 ; gain = 41.531
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1812.652 ; gain = 44.008
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 26e31ee38
+Phase 3.1 Global Routing | Checksum: 1220aa000
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 1812.469 ; gain = 41.531
-Phase 3 Initial Routing | Checksum: 998ca2f3
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1812.652 ; gain = 44.008
+Phase 3 Initial Routing | Checksum: 23eac8583
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 1812.469 ; gain = 41.531
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1812.652 ; gain = 44.008
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 44
- Number of Nodes with overlaps = 13
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-357.371| TNS=-357.371| WHS=N/A    | THS=N/A    |
-
-Phase 4.1 Global Iteration 0 | Checksum: eb288c89
-
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 1812.469 ; gain = 41.531
-
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 56
- Number of Nodes with overlaps = 21
- Number of Nodes with overlaps = 18
- Number of Nodes with overlaps = 18
- Number of Nodes with overlaps = 18
- Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 74
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 9
  Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-387.114| TNS=-387.114| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 22006ceeb
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1812.652 ; gain = 44.008
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 69
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-357.371| TNS=-357.371| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-387.013| TNS=-387.013| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: fd583038
+Phase 4.2 Global Iteration 1 | Checksum: 127c14912
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 1812.469 ; gain = 41.531
-Phase 4 Rip-up And Reroute | Checksum: fd583038
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1812.652 ; gain = 44.008
+Phase 4 Rip-up And Reroute | Checksum: 127c14912
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 1812.469 ; gain = 41.531
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1812.652 ; gain = 44.008
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: ffbf4fd5
+Phase 5.1.1 Update Timing | Checksum: c0aa26c6
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 1812.469 ; gain = 41.531
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-357.292| TNS=-357.292| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1812.652 ; gain = 44.008
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-386.934| TNS=-386.934| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 145225f8e
+Phase 5.1 Delay CleanUp | Checksum: 1b36267db
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 145225f8e
+Phase 5.2 Clock Skew Optimization | Checksum: 1b36267db
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
-Phase 5 Delay and Skew Optimization | Checksum: 145225f8e
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
+Phase 5 Delay and Skew Optimization | Checksum: 1b36267db
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1d2f73742
+Phase 6.1.1 Update Timing | Checksum: 26dc2f1e1
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-357.244| TNS=-357.244| WHS=0.117  | THS=0.000  |
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-386.844| TNS=-386.844| WHS=0.178  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1d2f73742
+Phase 6.1 Hold Fix Iter | Checksum: 26dc2f1e1
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
-Phase 6 Post Hold Fix | Checksum: 1d2f73742
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
+Phase 6 Post Hold Fix | Checksum: 26dc2f1e1
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.287656 %
-  Global Horizontal Routing Utilization  = 0.339009 %
+  Global Vertical Routing Utilization    = 0.347084 %
+  Global Horizontal Routing Utilization  = 0.373065 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -5005,10 +5008,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 18.018%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 17.1171%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 17.6471%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 16.1765%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 15.3153%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 22.5225%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 20.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 19.1176%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -5030,56 +5033,56 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 17b0da071
+Phase 7 Route finalize | Checksum: 27d4a6702
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 17b0da071
+Phase 8 Verifying routed nets | Checksum: 27d4a6702
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1e37fee30
+Phase 9 Depositing Routes | Checksum: 2c3d15d0c
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1814.887 ; gain = 43.949
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-357.244| TNS=-357.244| WHS=0.117  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-386.844| TNS=-386.844| WHS=0.178  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 1e37fee30
+Phase 10 Post Router Timing | Checksum: 2c3d15d0c
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 1814.887 ; gain = 43.949
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 1814.887 ; gain = 43.949
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1814.633 ; gain = 45.988
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 4467 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1814.887 ; gain = 54.809
+route_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1814.633 ; gain = 59.109
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.357 . Memory (MB): peak = 1828.742 ; gain = 13.855
-INFO: [Common 17-1381] The checkpoint 'C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_routed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.276 . Memory (MB): peak = 1826.445 ; gain = 11.812
+INFO: [Common 17-1381] The checkpoint 'D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_module_drc_routed.rpt -pb top_module_drc_routed.pb -rpx top_module_drc_routed.rpx
 Command: report_drc -file top_module_drc_routed.rpt -pb top_module_drc_routed.pb -rpx top_module_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_drc_routed.rpt.
 report_drc completed successfully
 INFO: [runtcl-4] Executing : report_methodology -file top_module_methodology_drc_routed.rpt -pb top_module_methodology_drc_routed.pb -rpx top_module_methodology_drc_routed.rpx
 Command: report_methodology -file top_module_methodology_drc_routed.rpt -pb top_module_methodology_drc_routed.pb -rpx top_module_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_methodology_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file D:/vivado_pj/masterDesign/masterDesign.runs/impl_1/top_module_methodology_drc_routed.rpt.
 report_methodology completed successfully
 INFO: [runtcl-4] Executing : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 Command: report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
@@ -5130,5 +5133,5 @@ INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT dev
 INFO: [Common 17-83] Releasing license: Implementation
 12 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2258.766 ; gain = 405.863
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 23 15:46:38 2023...
+write_bitstream: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2277.664 ; gain = 419.098
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  2 18:52:27 2023...

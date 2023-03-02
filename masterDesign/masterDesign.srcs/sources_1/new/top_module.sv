@@ -5,6 +5,10 @@
     `define DIVISOR_SIZE 20
 `endif
  
+ `ifndef OSC_LEN
+    `define OSC_LEN 1000
+`endif
+ 
 `ifndef INV_DELAY_LEN
     `define INV_DELAY_LEN 500
 `endif
@@ -49,7 +53,9 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     // input delay line;
     output logic pio48;
     
-
+    //ring oscilator
+    logic oscilator_out; 
+    
     // delay vars
     logic launch_reset, capture_reset;
     logic delay_input, data_ref, data_actual;
@@ -81,8 +87,12 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     logic clk_24Mhz;
     logic locked;
     clock_gen_24MHz (.clk_in(clk), .clk_out(clk_24Mhz), .locked(locked), .reset(rst));
+     
+    //ring oscillator
+    
+    ring_oscillator #(.OSC_INV_NUMBER(`OSC_LEN)) ring_osc (.out(oscilator_out));
       
-    // delay chain code
+    // delay chain module
     dff lauch_dff(.d(delay_input), .clk(clk_24Mhz), .reset(launch_reset), .q(data_ref));
    
     delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.delay_in(data_ref), .sel(sel), .delay_out(data_actual));
@@ -91,7 +101,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     
     dff capture_dff(.d(xor_result), .clk(clk_24Mhz), .reset(capture_reset), .q(error));
     
-    // UART code
+    // UART module
     assign rgb[2] = color_indicator;
     
     uart_rx uart_reader(.clk(clk_24Mhz), .rst(rst), 
