@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Mar  6 08:33:10 2023
-# Process ID: 4100
+# Start of session at: Mon Mar  6 09:46:59 2023
+# Process ID: 13160
 # Current directory: D:/vivado_pj/masterDesign/masterDesign.runs/synth_1
 # Command line: vivado.exe -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
 # Log file: D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.vds
@@ -11,7 +11,7 @@
 # Running On: DESKTOP-VEN7OOV, OS: Windows, CPU Frequency: 3408 MHz, CPU Physical cores: 4, Host memory: 17132 MB
 #-----------------------------------------------------------
 source top_module.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 395.906 ; gain = 70.277
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.043 ; gain = 68.078
 Command: read_checkpoint -auto_incremental -incremental D:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/vivado_pj/masterDesign/masterDesign.srcs/utils_1/imports/synth_1/nor_pair.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -24,19 +24,19 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3844
+INFO: [Synth 8-7075] Helper process launched with PID 2656
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/vivado_tool/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 CRITICAL WARNING: [Synth 8-9339] data object 'locked' is already declared [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:88]
 INFO: [Synth 8-6826] previous declaration of 'locked' is from here [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:41]
 CRITICAL WARNING: [Synth 8-11152] second declaration of 'locked' is ignored [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:88]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1200.426 ; gain = 410.496
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1198.727 ; gain = 408.965
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_module' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv:29]
-INFO: [Synth 8-6157] synthesizing module 'clock_gen_24MHz' [D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/.Xil/Vivado-4100-DESKTOP-VEN7OOV/realtime/clock_gen_24MHz_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clock_gen_24MHz' (0#1) [D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/.Xil/Vivado-4100-DESKTOP-VEN7OOV/realtime/clock_gen_24MHz_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clock_gen_24MHz' [D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/.Xil/Vivado-13160-DESKTOP-VEN7OOV/realtime/clock_gen_24MHz_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clock_gen_24MHz' (0#1) [D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/.Xil/Vivado-13160-DESKTOP-VEN7OOV/realtime/clock_gen_24MHz_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'ring_oscillator' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/ring_oscillator.sv:3]
-	Parameter OSC_INV_NUMBER bound to: 32'sb00000000000000000000000001100101 
+	Parameter OSC_INV_NUMBER bound to: 32'sb00000000000000000000000011001001 
 INFO: [Synth 8-6155] done synthesizing module 'ring_oscillator' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/ring_oscillator.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'dff' [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv:4]
 INFO: [Synth 8-6155] done synthesizing module 'dff' (0#1) [D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv:4]
@@ -87,18 +87,18 @@ WARNING: [Synth 8-7129] Port led[0] in module top_module is either unconnected o
 WARNING: [Synth 8-7129] Port btn[1] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[0] in module top_module is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1295.484 ; gain = 505.555
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.625 ; gain = 506.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1295.484 ; gain = 505.555
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.625 ; gain = 506.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1295.484 ; gain = 505.555
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.625 ; gain = 506.863
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1295.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1296.625 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -111,23 +111,23 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1352.875 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1352.996 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1352.875 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1352.996 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/vivado_tool/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1352.875 ; gain = 562.945
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1352.996 ; gain = 563.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25csga225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1352.875 ; gain = 562.945
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1352.996 ; gain = 563.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -136,7 +136,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/vivado_
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/vivado_pj/masterDesign/masterDesign.gen/sources_1/ip/clock_gen_24MHz/clock_gen_24MHz/clock_gen_24MHz_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for nolabel_line89. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1352.875 ; gain = 562.945
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1352.996 ; gain = 563.234
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
@@ -169,7 +169,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'top_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1352.875 ; gain = 562.945
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1352.996 ; gain = 563.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -228,23 +228,423 @@ WARNING: [Synth 8-7129] Port led[0] in module top_module is either unconnected o
 WARNING: [Synth 8-7129] Port btn[1] in module top_module is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[0] in module top_module is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1352.875 ; gain = 562.945
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1352.996 ; gain = 563.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1352.875 ; gain = 562.945
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1352.996 ; gain = 563.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1378.438 ; gain = 588.508
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1370.422 ; gain = 580.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+      : \ring_osc/inv_inferred__0 /out[199]
+      : \ring_osc/inv_inferred__0 /in0[199]
+      : \ring_osc/inv_inferred /out[199]
+      : \ring_osc/inv_inferred /in0[199]
+      : \ring_osc/inv_inferred__0 /out[198]
+      : \ring_osc/inv_inferred__0 /in0[198]
+      : \ring_osc/inv_inferred /out[198]
+      : \ring_osc/inv_inferred /in0[198]
+      : \ring_osc/inv_inferred__0 /out[197]
+      : \ring_osc/inv_inferred__0 /in0[197]
+      : \ring_osc/inv_inferred /out[197]
+      : \ring_osc/inv_inferred /in0[197]
+      : \ring_osc/inv_inferred__0 /out[196]
+      : \ring_osc/inv_inferred__0 /in0[196]
+      : \ring_osc/inv_inferred /out[196]
+      : \ring_osc/inv_inferred /in0[196]
+      : \ring_osc/inv_inferred__0 /out[195]
+      : \ring_osc/inv_inferred__0 /in0[195]
+      : \ring_osc/inv_inferred /out[195]
+      : \ring_osc/inv_inferred /in0[195]
+      : \ring_osc/inv_inferred__0 /out[194]
+      : \ring_osc/inv_inferred__0 /in0[194]
+      : \ring_osc/inv_inferred /out[194]
+      : \ring_osc/inv_inferred /in0[194]
+      : \ring_osc/inv_inferred__0 /out[193]
+      : \ring_osc/inv_inferred__0 /in0[193]
+      : \ring_osc/inv_inferred /out[193]
+      : \ring_osc/inv_inferred /in0[193]
+      : \ring_osc/inv_inferred__0 /out[192]
+      : \ring_osc/inv_inferred__0 /in0[192]
+      : \ring_osc/inv_inferred /out[192]
+      : \ring_osc/inv_inferred /in0[192]
+      : \ring_osc/inv_inferred__0 /out[191]
+      : \ring_osc/inv_inferred__0 /in0[191]
+      : \ring_osc/inv_inferred /out[191]
+      : \ring_osc/inv_inferred /in0[191]
+      : \ring_osc/inv_inferred__0 /out[190]
+      : \ring_osc/inv_inferred__0 /in0[190]
+      : \ring_osc/inv_inferred /out[190]
+      : \ring_osc/inv_inferred /in0[190]
+      : \ring_osc/inv_inferred__0 /out[189]
+      : \ring_osc/inv_inferred__0 /in0[189]
+      : \ring_osc/inv_inferred /out[189]
+      : \ring_osc/inv_inferred /in0[189]
+      : \ring_osc/inv_inferred__0 /out[188]
+      : \ring_osc/inv_inferred__0 /in0[188]
+      : \ring_osc/inv_inferred /out[188]
+      : \ring_osc/inv_inferred /in0[188]
+      : \ring_osc/inv_inferred__0 /out[187]
+      : \ring_osc/inv_inferred__0 /in0[187]
+      : \ring_osc/inv_inferred /out[187]
+      : \ring_osc/inv_inferred /in0[187]
+      : \ring_osc/inv_inferred__0 /out[186]
+      : \ring_osc/inv_inferred__0 /in0[186]
+      : \ring_osc/inv_inferred /out[186]
+      : \ring_osc/inv_inferred /in0[186]
+      : \ring_osc/inv_inferred__0 /out[185]
+      : \ring_osc/inv_inferred__0 /in0[185]
+      : \ring_osc/inv_inferred /out[185]
+      : \ring_osc/inv_inferred /in0[185]
+      : \ring_osc/inv_inferred__0 /out[184]
+      : \ring_osc/inv_inferred__0 /in0[184]
+      : \ring_osc/inv_inferred /out[184]
+      : \ring_osc/inv_inferred /in0[184]
+      : \ring_osc/inv_inferred__0 /out[183]
+      : \ring_osc/inv_inferred__0 /in0[183]
+      : \ring_osc/inv_inferred /out[183]
+      : \ring_osc/inv_inferred /in0[183]
+      : \ring_osc/inv_inferred__0 /out[182]
+      : \ring_osc/inv_inferred__0 /in0[182]
+      : \ring_osc/inv_inferred /out[182]
+      : \ring_osc/inv_inferred /in0[182]
+      : \ring_osc/inv_inferred__0 /out[181]
+      : \ring_osc/inv_inferred__0 /in0[181]
+      : \ring_osc/inv_inferred /out[181]
+      : \ring_osc/inv_inferred /in0[181]
+      : \ring_osc/inv_inferred__0 /out[180]
+      : \ring_osc/inv_inferred__0 /in0[180]
+      : \ring_osc/inv_inferred /out[180]
+      : \ring_osc/inv_inferred /in0[180]
+      : \ring_osc/inv_inferred__0 /out[179]
+      : \ring_osc/inv_inferred__0 /in0[179]
+      : \ring_osc/inv_inferred /out[179]
+      : \ring_osc/inv_inferred /in0[179]
+      : \ring_osc/inv_inferred__0 /out[178]
+      : \ring_osc/inv_inferred__0 /in0[178]
+      : \ring_osc/inv_inferred /out[178]
+      : \ring_osc/inv_inferred /in0[178]
+      : \ring_osc/inv_inferred__0 /out[177]
+      : \ring_osc/inv_inferred__0 /in0[177]
+      : \ring_osc/inv_inferred /out[177]
+      : \ring_osc/inv_inferred /in0[177]
+      : \ring_osc/inv_inferred__0 /out[176]
+      : \ring_osc/inv_inferred__0 /in0[176]
+      : \ring_osc/inv_inferred /out[176]
+      : \ring_osc/inv_inferred /in0[176]
+      : \ring_osc/inv_inferred__0 /out[175]
+      : \ring_osc/inv_inferred__0 /in0[175]
+      : \ring_osc/inv_inferred /out[175]
+      : \ring_osc/inv_inferred /in0[175]
+      : \ring_osc/inv_inferred__0 /out[174]
+      : \ring_osc/inv_inferred__0 /in0[174]
+      : \ring_osc/inv_inferred /out[174]
+      : \ring_osc/inv_inferred /in0[174]
+      : \ring_osc/inv_inferred__0 /out[173]
+      : \ring_osc/inv_inferred__0 /in0[173]
+      : \ring_osc/inv_inferred /out[173]
+      : \ring_osc/inv_inferred /in0[173]
+      : \ring_osc/inv_inferred__0 /out[172]
+      : \ring_osc/inv_inferred__0 /in0[172]
+      : \ring_osc/inv_inferred /out[172]
+      : \ring_osc/inv_inferred /in0[172]
+      : \ring_osc/inv_inferred__0 /out[171]
+      : \ring_osc/inv_inferred__0 /in0[171]
+      : \ring_osc/inv_inferred /out[171]
+      : \ring_osc/inv_inferred /in0[171]
+      : \ring_osc/inv_inferred__0 /out[170]
+      : \ring_osc/inv_inferred__0 /in0[170]
+      : \ring_osc/inv_inferred /out[170]
+      : \ring_osc/inv_inferred /in0[170]
+      : \ring_osc/inv_inferred__0 /out[169]
+      : \ring_osc/inv_inferred__0 /in0[169]
+      : \ring_osc/inv_inferred /out[169]
+      : \ring_osc/inv_inferred /in0[169]
+      : \ring_osc/inv_inferred__0 /out[168]
+      : \ring_osc/inv_inferred__0 /in0[168]
+      : \ring_osc/inv_inferred /out[168]
+      : \ring_osc/inv_inferred /in0[168]
+      : \ring_osc/inv_inferred__0 /out[167]
+      : \ring_osc/inv_inferred__0 /in0[167]
+      : \ring_osc/inv_inferred /out[167]
+      : \ring_osc/inv_inferred /in0[167]
+      : \ring_osc/inv_inferred__0 /out[166]
+      : \ring_osc/inv_inferred__0 /in0[166]
+      : \ring_osc/inv_inferred /out[166]
+      : \ring_osc/inv_inferred /in0[166]
+      : \ring_osc/inv_inferred__0 /out[165]
+      : \ring_osc/inv_inferred__0 /in0[165]
+      : \ring_osc/inv_inferred /out[165]
+      : \ring_osc/inv_inferred /in0[165]
+      : \ring_osc/inv_inferred__0 /out[164]
+      : \ring_osc/inv_inferred__0 /in0[164]
+      : \ring_osc/inv_inferred /out[164]
+      : \ring_osc/inv_inferred /in0[164]
+      : \ring_osc/inv_inferred__0 /out[163]
+      : \ring_osc/inv_inferred__0 /in0[163]
+      : \ring_osc/inv_inferred /out[163]
+      : \ring_osc/inv_inferred /in0[163]
+      : \ring_osc/inv_inferred__0 /out[162]
+      : \ring_osc/inv_inferred__0 /in0[162]
+      : \ring_osc/inv_inferred /out[162]
+      : \ring_osc/inv_inferred /in0[162]
+      : \ring_osc/inv_inferred__0 /out[161]
+      : \ring_osc/inv_inferred__0 /in0[161]
+      : \ring_osc/inv_inferred /out[161]
+      : \ring_osc/inv_inferred /in0[161]
+      : \ring_osc/inv_inferred__0 /out[160]
+      : \ring_osc/inv_inferred__0 /in0[160]
+      : \ring_osc/inv_inferred /out[160]
+      : \ring_osc/inv_inferred /in0[160]
+      : \ring_osc/inv_inferred__0 /out[159]
+      : \ring_osc/inv_inferred__0 /in0[159]
+      : \ring_osc/inv_inferred /out[159]
+      : \ring_osc/inv_inferred /in0[159]
+      : \ring_osc/inv_inferred__0 /out[158]
+      : \ring_osc/inv_inferred__0 /in0[158]
+      : \ring_osc/inv_inferred /out[158]
+      : \ring_osc/inv_inferred /in0[158]
+      : \ring_osc/inv_inferred__0 /out[157]
+      : \ring_osc/inv_inferred__0 /in0[157]
+      : \ring_osc/inv_inferred /out[157]
+      : \ring_osc/inv_inferred /in0[157]
+      : \ring_osc/inv_inferred__0 /out[156]
+      : \ring_osc/inv_inferred__0 /in0[156]
+      : \ring_osc/inv_inferred /out[156]
+      : \ring_osc/inv_inferred /in0[156]
+      : \ring_osc/inv_inferred__0 /out[155]
+      : \ring_osc/inv_inferred__0 /in0[155]
+      : \ring_osc/inv_inferred /out[155]
+      : \ring_osc/inv_inferred /in0[155]
+      : \ring_osc/inv_inferred__0 /out[154]
+      : \ring_osc/inv_inferred__0 /in0[154]
+      : \ring_osc/inv_inferred /out[154]
+      : \ring_osc/inv_inferred /in0[154]
+      : \ring_osc/inv_inferred__0 /out[153]
+      : \ring_osc/inv_inferred__0 /in0[153]
+      : \ring_osc/inv_inferred /out[153]
+      : \ring_osc/inv_inferred /in0[153]
+      : \ring_osc/inv_inferred__0 /out[152]
+      : \ring_osc/inv_inferred__0 /in0[152]
+      : \ring_osc/inv_inferred /out[152]
+      : \ring_osc/inv_inferred /in0[152]
+      : \ring_osc/inv_inferred__0 /out[151]
+      : \ring_osc/inv_inferred__0 /in0[151]
+      : \ring_osc/inv_inferred /out[151]
+      : \ring_osc/inv_inferred /in0[151]
+      : \ring_osc/inv_inferred__0 /out[150]
+      : \ring_osc/inv_inferred__0 /in0[150]
+      : \ring_osc/inv_inferred /out[150]
+      : \ring_osc/inv_inferred /in0[150]
+      : \ring_osc/inv_inferred__0 /out[149]
+      : \ring_osc/inv_inferred__0 /in0[149]
+      : \ring_osc/inv_inferred /out[149]
+      : \ring_osc/inv_inferred /in0[149]
+      : \ring_osc/inv_inferred__0 /out[148]
+      : \ring_osc/inv_inferred__0 /in0[148]
+      : \ring_osc/inv_inferred /out[148]
+      : \ring_osc/inv_inferred /in0[148]
+      : \ring_osc/inv_inferred__0 /out[147]
+      : \ring_osc/inv_inferred__0 /in0[147]
+      : \ring_osc/inv_inferred /out[147]
+      : \ring_osc/inv_inferred /in0[147]
+      : \ring_osc/inv_inferred__0 /out[146]
+      : \ring_osc/inv_inferred__0 /in0[146]
+      : \ring_osc/inv_inferred /out[146]
+      : \ring_osc/inv_inferred /in0[146]
+      : \ring_osc/inv_inferred__0 /out[145]
+      : \ring_osc/inv_inferred__0 /in0[145]
+      : \ring_osc/inv_inferred /out[145]
+      : \ring_osc/inv_inferred /in0[145]
+      : \ring_osc/inv_inferred__0 /out[144]
+      : \ring_osc/inv_inferred__0 /in0[144]
+      : \ring_osc/inv_inferred /out[144]
+      : \ring_osc/inv_inferred /in0[144]
+      : \ring_osc/inv_inferred__0 /out[143]
+      : \ring_osc/inv_inferred__0 /in0[143]
+      : \ring_osc/inv_inferred /out[143]
+      : \ring_osc/inv_inferred /in0[143]
+      : \ring_osc/inv_inferred__0 /out[142]
+      : \ring_osc/inv_inferred__0 /in0[142]
+      : \ring_osc/inv_inferred /out[142]
+      : \ring_osc/inv_inferred /in0[142]
+      : \ring_osc/inv_inferred__0 /out[141]
+      : \ring_osc/inv_inferred__0 /in0[141]
+      : \ring_osc/inv_inferred /out[141]
+      : \ring_osc/inv_inferred /in0[141]
+      : \ring_osc/inv_inferred__0 /out[140]
+      : \ring_osc/inv_inferred__0 /in0[140]
+      : \ring_osc/inv_inferred /out[140]
+      : \ring_osc/inv_inferred /in0[140]
+      : \ring_osc/inv_inferred__0 /out[139]
+      : \ring_osc/inv_inferred__0 /in0[139]
+      : \ring_osc/inv_inferred /out[139]
+      : \ring_osc/inv_inferred /in0[139]
+      : \ring_osc/inv_inferred__0 /out[138]
+      : \ring_osc/inv_inferred__0 /in0[138]
+      : \ring_osc/inv_inferred /out[138]
+      : \ring_osc/inv_inferred /in0[138]
+      : \ring_osc/inv_inferred__0 /out[137]
+      : \ring_osc/inv_inferred__0 /in0[137]
+      : \ring_osc/inv_inferred /out[137]
+      : \ring_osc/inv_inferred /in0[137]
+      : \ring_osc/inv_inferred__0 /out[136]
+      : \ring_osc/inv_inferred__0 /in0[136]
+      : \ring_osc/inv_inferred /out[136]
+      : \ring_osc/inv_inferred /in0[136]
+      : \ring_osc/inv_inferred__0 /out[135]
+      : \ring_osc/inv_inferred__0 /in0[135]
+      : \ring_osc/inv_inferred /out[135]
+      : \ring_osc/inv_inferred /in0[135]
+      : \ring_osc/inv_inferred__0 /out[134]
+      : \ring_osc/inv_inferred__0 /in0[134]
+      : \ring_osc/inv_inferred /out[134]
+      : \ring_osc/inv_inferred /in0[134]
+      : \ring_osc/inv_inferred__0 /out[133]
+      : \ring_osc/inv_inferred__0 /in0[133]
+      : \ring_osc/inv_inferred /out[133]
+      : \ring_osc/inv_inferred /in0[133]
+      : \ring_osc/inv_inferred__0 /out[132]
+      : \ring_osc/inv_inferred__0 /in0[132]
+      : \ring_osc/inv_inferred /out[132]
+      : \ring_osc/inv_inferred /in0[132]
+      : \ring_osc/inv_inferred__0 /out[131]
+      : \ring_osc/inv_inferred__0 /in0[131]
+      : \ring_osc/inv_inferred /out[131]
+      : \ring_osc/inv_inferred /in0[131]
+      : \ring_osc/inv_inferred__0 /out[130]
+      : \ring_osc/inv_inferred__0 /in0[130]
+      : \ring_osc/inv_inferred /out[130]
+      : \ring_osc/inv_inferred /in0[130]
+      : \ring_osc/inv_inferred__0 /out[129]
+      : \ring_osc/inv_inferred__0 /in0[129]
+      : \ring_osc/inv_inferred /out[129]
+      : \ring_osc/inv_inferred /in0[129]
+      : \ring_osc/inv_inferred__0 /out[128]
+      : \ring_osc/inv_inferred__0 /in0[128]
+      : \ring_osc/inv_inferred /out[128]
+      : \ring_osc/inv_inferred /in0[128]
+      : \ring_osc/inv_inferred__0 /out[127]
+      : \ring_osc/inv_inferred__0 /in0[127]
+      : \ring_osc/inv_inferred /out[127]
+      : \ring_osc/inv_inferred /in0[127]
+      : \ring_osc/inv_inferred__0 /out[126]
+      : \ring_osc/inv_inferred__0 /in0[126]
+      : \ring_osc/inv_inferred /out[126]
+      : \ring_osc/inv_inferred /in0[126]
+      : \ring_osc/inv_inferred__0 /out[125]
+      : \ring_osc/inv_inferred__0 /in0[125]
+      : \ring_osc/inv_inferred /out[125]
+      : \ring_osc/inv_inferred /in0[125]
+      : \ring_osc/inv_inferred__0 /out[124]
+      : \ring_osc/inv_inferred__0 /in0[124]
+      : \ring_osc/inv_inferred /out[124]
+      : \ring_osc/inv_inferred /in0[124]
+      : \ring_osc/inv_inferred__0 /out[123]
+      : \ring_osc/inv_inferred__0 /in0[123]
+      : \ring_osc/inv_inferred /out[123]
+      : \ring_osc/inv_inferred /in0[123]
+      : \ring_osc/inv_inferred__0 /out[122]
+      : \ring_osc/inv_inferred__0 /in0[122]
+      : \ring_osc/inv_inferred /out[122]
+      : \ring_osc/inv_inferred /in0[122]
+      : \ring_osc/inv_inferred__0 /out[121]
+      : \ring_osc/inv_inferred__0 /in0[121]
+      : \ring_osc/inv_inferred /out[121]
+      : \ring_osc/inv_inferred /in0[121]
+      : \ring_osc/inv_inferred__0 /out[120]
+      : \ring_osc/inv_inferred__0 /in0[120]
+      : \ring_osc/inv_inferred /out[120]
+      : \ring_osc/inv_inferred /in0[120]
+      : \ring_osc/inv_inferred__0 /out[119]
+      : \ring_osc/inv_inferred__0 /in0[119]
+      : \ring_osc/inv_inferred /out[119]
+      : \ring_osc/inv_inferred /in0[119]
+      : \ring_osc/inv_inferred__0 /out[118]
+      : \ring_osc/inv_inferred__0 /in0[118]
+      : \ring_osc/inv_inferred /out[118]
+      : \ring_osc/inv_inferred /in0[118]
+      : \ring_osc/inv_inferred__0 /out[117]
+      : \ring_osc/inv_inferred__0 /in0[117]
+      : \ring_osc/inv_inferred /out[117]
+      : \ring_osc/inv_inferred /in0[117]
+      : \ring_osc/inv_inferred__0 /out[116]
+      : \ring_osc/inv_inferred__0 /in0[116]
+      : \ring_osc/inv_inferred /out[116]
+      : \ring_osc/inv_inferred /in0[116]
+      : \ring_osc/inv_inferred__0 /out[115]
+      : \ring_osc/inv_inferred__0 /in0[115]
+      : \ring_osc/inv_inferred /out[115]
+      : \ring_osc/inv_inferred /in0[115]
+      : \ring_osc/inv_inferred__0 /out[114]
+      : \ring_osc/inv_inferred__0 /in0[114]
+      : \ring_osc/inv_inferred /out[114]
+      : \ring_osc/inv_inferred /in0[114]
+      : \ring_osc/inv_inferred__0 /out[113]
+      : \ring_osc/inv_inferred__0 /in0[113]
+      : \ring_osc/inv_inferred /out[113]
+      : \ring_osc/inv_inferred /in0[113]
+      : \ring_osc/inv_inferred__0 /out[112]
+      : \ring_osc/inv_inferred__0 /in0[112]
+      : \ring_osc/inv_inferred /out[112]
+      : \ring_osc/inv_inferred /in0[112]
+      : \ring_osc/inv_inferred__0 /out[111]
+      : \ring_osc/inv_inferred__0 /in0[111]
+      : \ring_osc/inv_inferred /out[111]
+      : \ring_osc/inv_inferred /in0[111]
+      : \ring_osc/inv_inferred__0 /out[110]
+      : \ring_osc/inv_inferred__0 /in0[110]
+      : \ring_osc/inv_inferred /out[110]
+      : \ring_osc/inv_inferred /in0[110]
+      : \ring_osc/inv_inferred__0 /out[109]
+      : \ring_osc/inv_inferred__0 /in0[109]
+      : \ring_osc/inv_inferred /out[109]
+      : \ring_osc/inv_inferred /in0[109]
+      : \ring_osc/inv_inferred__0 /out[108]
+      : \ring_osc/inv_inferred__0 /in0[108]
+      : \ring_osc/inv_inferred /out[108]
+      : \ring_osc/inv_inferred /in0[108]
+      : \ring_osc/inv_inferred__0 /out[107]
+      : \ring_osc/inv_inferred__0 /in0[107]
+      : \ring_osc/inv_inferred /out[107]
+      : \ring_osc/inv_inferred /in0[107]
+      : \ring_osc/inv_inferred__0 /out[106]
+      : \ring_osc/inv_inferred__0 /in0[106]
+      : \ring_osc/inv_inferred /out[106]
+      : \ring_osc/inv_inferred /in0[106]
+      : \ring_osc/inv_inferred__0 /out[105]
+      : \ring_osc/inv_inferred__0 /in0[105]
+      : \ring_osc/inv_inferred /out[105]
+      : \ring_osc/inv_inferred /in0[105]
+      : \ring_osc/inv_inferred__0 /out[104]
+      : \ring_osc/inv_inferred__0 /in0[104]
+      : \ring_osc/inv_inferred /out[104]
+      : \ring_osc/inv_inferred /in0[104]
+      : \ring_osc/inv_inferred__0 /out[103]
+      : \ring_osc/inv_inferred__0 /in0[103]
+      : \ring_osc/inv_inferred /out[103]
+      : \ring_osc/inv_inferred /in0[103]
+      : \ring_osc/inv_inferred__0 /out[102]
+      : \ring_osc/inv_inferred__0 /in0[102]
+      : \ring_osc/inv_inferred /out[102]
+      : \ring_osc/inv_inferred /in0[102]
+      : \ring_osc/inv_inferred__0 /out[101]
+      : \ring_osc/inv_inferred__0 /in0[101]
+      : \ring_osc/inv_inferred /out[101]
+      : \ring_osc/inv_inferred /in0[101]
+      : \ring_osc/inv_inferred__0 /out[100]
+      : \ring_osc/inv_inferred__0 /in0[100]
+      : \ring_osc/inv_inferred /out[100]
+      : \ring_osc/inv_inferred /in0[100]
       : \ring_osc/inv_inferred__0 /out[99]
       : \ring_osc/inv_inferred__0 /in0[99]
       : \ring_osc/inv_inferred /out[99]
@@ -645,12 +1045,12 @@ Start Technology Mapping
       : \ring_osc/inv_inferred__0 /in0[0]
       : \ring_osc/inv_inferred /out[0]
       : \ring_osc/inv_inferred /in0[0]
-      : \ring_osc/inv_inferred__0 /out[100]
-      : \ring_osc/inv_inferred__0 /in0[100]
-      : \ring_osc/inv_inferred /out[100]
-      : \ring_osc/inv_inferred /in0[100]
+      : \ring_osc/inv_inferred__0 /out[200]
+      : \ring_osc/inv_inferred__0 /in0[200]
+      : \ring_osc/inv_inferred /out[200]
+      : \ring_osc/inv_inferred /in0[200]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1374.230 ; gain = 584.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -668,37 +1068,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1374.230 ; gain = 584.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1374.230 ; gain = 584.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1374.230 ; gain = 584.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1374.230 ; gain = 584.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1374.230 ; gain = 584.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1374.230 ; gain = 584.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -717,7 +1117,7 @@ Report Cell Usage:
 +------+----------------+------+
 |1     |clock_gen_24MHz |     1|
 |2     |CARRY4          |     8|
-|3     |LUT1            |  1119|
+|3     |LUT1            |  1219|
 |4     |LUT2            |    24|
 |5     |LUT3            |    14|
 |6     |LUT4            |    23|
@@ -732,28 +1132,28 @@ Report Cell Usage:
 |15    |OBUFT           |     6|
 +------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1374.230 ; gain = 584.469
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 1385.094 ; gain = 537.773
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1385.094 ; gain = 595.164
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 1374.230 ; gain = 528.098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1374.230 ; gain = 584.469
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1385.094 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1374.230 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1391.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1380.734 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: e5ffed27
+Synth Design complete, checksum: 7dfc322e
 INFO: [Common 17-83] Releasing license: Synthesis
 67 Infos, 21 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:01 . Memory (MB): peak = 1391.609 ; gain = 963.691
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 1380.734 ; gain = 952.578
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  6 08:34:20 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  6 09:48:02 2023...
