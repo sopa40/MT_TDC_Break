@@ -6,7 +6,7 @@
 `endif
  
  `ifndef OSC_LEN
-    `define OSC_LEN 501
+    `define OSC_LEN 1001
 `endif
  
 `ifndef INV_DELAY_LEN
