@@ -6,11 +6,11 @@
 `endif
  
  `ifndef OSC_LEN
-    `define OSC_LEN 1000
+    `define OSC_LEN 101
 `endif
  
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 500
+    `define INV_DELAY_LEN 506
 `endif
 
 `ifndef NOR_DELAY_LEN
@@ -89,7 +89,6 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     clock_gen_24MHz (.clk_in(clk), .clk_out(clk_24Mhz), .locked(locked), .reset(rst));
      
     //ring oscillator
-    
     ring_oscillator #(.OSC_INV_NUMBER(`OSC_LEN)) ring_osc (.out(oscilator_out));
       
     // delay chain module

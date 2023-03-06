@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Mar  2 18:52:14 2023
+| Date         : Mon Mar  6 08:43:20 2023
 | Host         : DESKTOP-VEN7OOV running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_module_methodology_drc_routed.rpt -pb top_module_methodology_drc_routed.pb -rpx top_module_methodology_drc_routed.rpx
 | Design       : top_module
@@ -47,12 +47,12 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -386.870 ns between lauch_dff/q_reg/C (clocked by clk_out_clock_gen_24MHz) and capture_dff/q_reg/D (clocked by clk_out_clock_gen_24MHz). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -400.126 ns between lauch_dff/q_reg/C (clocked by clk_out_clock_gen_24MHz) and capture_dff/q_reg/D (clocked by clk_out_clock_gen_24MHz). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-23#1 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between ring_osc/inv_inferred_i_1/I0 and ring_osc/inv_inferred_i_1/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between ring_osc/inv_inferred_i_12/I0 and ring_osc/inv_inferred_i_12/O to disable the timing loop
 Related violations: <none>
 
 
