@@ -5,12 +5,8 @@
     `define DIVISOR_SIZE 20
 `endif
  
- `ifndef OSC_LEN
-    `define OSC_LEN 1001
-`endif
- 
 `ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 506
+    `define INV_DELAY_LEN 206
 `endif
 
 `ifndef NOR_DELAY_LEN
@@ -25,20 +21,12 @@
     `define SET_LEN_SUCCESS_RESPONSE 8'h76
 `endif
 
-
-module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio46, pio48);
+module top_module(btn, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio48);
     input clk; 
-    input logic [1 : 0] btn;
-    output logic [2 : 0] rgb;
-    output logic [3 : 0] led;
+    input logic [1:0] btn;
+    output logic [2:0] rgb;
     input logic uart_rx;
     output logic tx;
-    
-    logic [`DIVISOR_SIZE-1:0] clk_div_cnt;
-    logic clk_variable;
-    
-    logic rst;
-    logic locked;
     
     // reference data for delay line
     output logic pio1;
@@ -48,13 +36,12 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     output logic pio16;
     // clock output
     output logic pio40;
-    // trigger XOR
-    output logic pio46;
     // input delay line;
     output logic pio48;
-    
-    //ring oscilator
-    logic oscilator_out; 
+           
+    logic [`DIVISOR_SIZE-1:0] clk_div_cnt;
+    logic clk_variable;
+    logic rst;
     
     // delay vars
     logic launch_reset, capture_reset;
@@ -66,8 +53,8 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     logic [31:0] data_reg;
     
     // UART vars
-    logic valid;
     logic color_indicator;
+    logic valid;
     logic [7:0] rx_data_out;
     logic en, rdy;
     logic [7:0] tx_data_in;
@@ -75,7 +62,7 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     typedef enum {IDLE, RCV_FIRST_BYTE, RCV_SECOND_BYTE, RCVD, SET_DONE} state_t;
     state_t current_state;
 
-    // for measurments for tuning:
+    // Signal outputs:
     assign pio1 = data_ref;  
     assign pio9 = data_actual;
     assign pio16 = error;
@@ -83,96 +70,95 @@ module top_module(btn, rgb, led, clk, tx, uart_rx, pio1, pio9, pio16, pio40, pio
     assign pio46 = xor_result;
     assign pio48 = delay_input;
     
+    assign rst = btn[0];
+    
     // 24MHz clk
     logic clk_24Mhz;
     logic locked;
     clock_gen_24MHz (.clk_in(clk), .clk_out(clk_24Mhz), .locked(locked), .reset(rst));
-     
-    //ring oscillator
-    ring_oscillator #(.OSC_INV_NUMBER(`OSC_LEN)) ring_osc (.out(oscilator_out));
       
     // delay chain module
     dff lauch_dff(.d(delay_input), .clk(clk_24Mhz), .reset(launch_reset), .q(data_ref));
-   
     delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.delay_in(data_ref), .sel(sel), .delay_out(data_actual));
-    
     xor_gate data_comp(.a(data_ref), .b(data_actual), .c(xor_result));
-    
     dff capture_dff(.d(xor_result), .clk(clk_24Mhz), .reset(capture_reset), .q(error));
     
     // UART module
     assign rgb[2] = color_indicator;
-    
     uart_rx uart_reader(.clk(clk_24Mhz), .rst(rst), 
                 .din(uart_rx), .data_out(rx_data_out), .valid(valid));
-    
     uart_tx uart_writer(.clk(clk_24Mhz), .rst(rst), .data_in(tx_data_in), .en(en), .dout(tx), .rdy(rdy));
     
-    initial begin 
-        color_indicator <= 0;
-        delay_input <= 0;
-        sel <= 100;
-        launch_reset <= 0;
-        capture_reset <= 0;
-        rst <= 0;
-        valid <= 0;
-        rx_data_out <= 0;
-        data_reg <= 32'h48;
-    end
+    // CORE 
+    //CORE core();
     
     always_ff @ (posedge clk_24Mhz) begin
-        /* Divisor code */
-        clk_div_cnt <= clk_div_cnt + 1;
-        if (clk_div_cnt >= (`DIVISOR_SIZE-1)) begin
-            clk_div_cnt <= 0;
+        if (rst) begin
+            color_indicator <= 1;
+            delay_input <= 0;
+            sel <= 100;
+            launch_reset <= 0;
+            capture_reset <= 0;
+            data_reg <= 32'h48;
         end
-        clk_variable <= (clk_div_cnt < `DIVISOR_SIZE/2) ? 1 : 0;
+        else begin
+            delay_input <= delay_input;
+            sel <= sel;
+            launch_reset <= launch_reset;
+            capture_reset <= capture_reset;
+            data_reg <= data_reg;
         
-        delay_input <= ~delay_input;
-        
-        /* UART Code */
-        color_indicator <= color_indicator;
-        en <= en;
-        case (current_state)
-            IDLE: begin
-                en <= 0;
-                if (valid && rx_data_out == `SET_LEN_START_CMD) begin
-                    color_indicator <= ~color_indicator;
-                    current_state <= RCV_FIRST_BYTE;
-                end
+            /* Divisor code */
+            clk_div_cnt <= clk_div_cnt + 1;
+            if (clk_div_cnt >= (`DIVISOR_SIZE-1)) begin
+                clk_div_cnt <= 0;
             end
-            RCV_FIRST_BYTE: begin
-                if (valid) begin
-                    color_indicator <= ~color_indicator;
-                    sel[7:0] <= rx_data_out[7:0];
-                    current_state <= RCV_SECOND_BYTE;
-                end
-            end
-            RCV_SECOND_BYTE: begin
-                if (valid) begin
-                    color_indicator <= ~color_indicator;
-                    sel[15:8] <= rx_data_out[7:0];
-                    current_state <= RCVD;
-                end
-            end
-            RCVD: begin
-                if (rdy) begin
-                    color_indicator <= ~color_indicator;
-                    tx_data_in[7:0] <= sel[15:8];
-                    current_state <= SET_DONE;
-                end
-            end
-            SET_DONE: begin
-                if (rdy) begin
-                    color_indicator <= ~color_indicator;
-                    tx_data_in[7:0] <= `SET_LEN_SUCCESS_RESPONSE;
-                    en <= 1;
-                    current_state <= IDLE;
-                end
-            end
+            clk_variable <= (clk_div_cnt < `DIVISOR_SIZE/2) ? 1 : 0;
             
-        endcase     
+            delay_input <= ~delay_input;
+            
+            /* UART Code */
+            color_indicator <= color_indicator;
+            en <= en;
+            case (current_state)
+                IDLE: begin
+                    en <= 0;
+                    if (valid && rx_data_out == `SET_LEN_START_CMD) begin
+                        color_indicator <= ~color_indicator;
+                        current_state <= RCV_FIRST_BYTE;
+                    end
+                end
+                RCV_FIRST_BYTE: begin
+                    if (valid) begin
+                        sel[7:0] <= rx_data_out[7:0];
+                        current_state <= RCV_SECOND_BYTE;
+                    end
+                end
+                RCV_SECOND_BYTE: begin
+                    if (valid) begin
+                        color_indicator <= ~color_indicator;
+                        sel[15:8] <= rx_data_out[7:0];
+                        current_state <= RCVD;
+                    end
+                end
+                RCVD: begin
+                    if (rdy) begin
+                        color_indicator <= ~color_indicator;
+                        tx_data_in[7:0] <= sel[15:8];
+                        current_state <= SET_DONE;
+                    end
+                end
+                SET_DONE: begin
+                    if (rdy) begin
+                        color_indicator <= ~color_indicator;
+                        tx_data_in[7:0] <= `SET_LEN_SUCCESS_RESPONSE;
+                        en <= 1;
+                        current_state <= IDLE;
+                    end
+                end
+                
+            endcase   
+        end  
     end
-
 
 endmodule

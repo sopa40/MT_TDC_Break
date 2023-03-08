@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Mar  6 11:07:32 2023
-# Process ID: 2436
+# Start of session at: Wed Mar  8 14:34:54 2023
+# Process ID: 23224
 # Current directory: D:/vivado_pj/masterDesign/masterDesign.runs/synth_1
 # Command line: vivado.exe -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
 # Log file: D:/vivado_pj/masterDesign/masterDesign.runs/synth_1/top_module.vds
