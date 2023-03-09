@@ -96,9 +96,9 @@ read_verilog -library xil_defaultlib -sv {
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv
-  D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_defs.sv
-  D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_rx.sv
-  D:/vivado_pj/UART/UART.srcs/sources_1/new/uart_tx.sv
+  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/uart_defs.sv
+  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/uart_rx.sv
+  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/uart_tx.sv
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/top_module.sv
 }

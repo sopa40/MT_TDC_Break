@@ -81,7 +81,7 @@ module top_module(btn, led, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40);
                 .din(uart_rx), .data_out(rx_data_out), .valid(valid));
     uart_tx uart_writer(.clk(clk), .rst(rst), .data_in(tx_data_in), .en(en), .dout(tx), .rdy(rdy));
     
-    // CORE 
+    /* CORE */ 
     //CORE core();
     
     /* Core and delay chain clocking */

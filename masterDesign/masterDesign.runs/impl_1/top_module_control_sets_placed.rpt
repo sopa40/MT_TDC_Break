@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Mar  9 13:20:35 2023
+| Date         : Thu Mar  9 13:40:21 2023
 | Host         : DESKTOP-VEN7OOV running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
 | Design       : top_module
@@ -73,13 +73,13 @@ Table of Contents
 +------------------------------+--------------------------------+-------------------------------------------------+------------------+----------------+--------------+
 |         Clock Signal         |          Enable Signal         |                 Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
 +------------------------------+--------------------------------+-------------------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG               | uart_writer/dout_i_1_n_0       | btn_IBUF[0]                                     |                1 |              1 |         1.00 |
 |  nolabel_line70/inst/clk_out |                                | btn_IBUF[0]                                     |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG               | uart_writer/dout_i_1_n_0       | btn_IBUF[0]                                     |                1 |              1 |         1.00 |
 |  nolabel_line70/inst/clk_out |                                |                                                 |                2 |              3 |         1.50 |
 |  clk_IBUF_BUFG               | uart_writer/rdy_reg_0          | uart_writer/FSM_sequential_current_state_reg[2] |                2 |              5 |         2.50 |
 |  clk_IBUF_BUFG               | uart_reader/bit_cnt[0]_i_2_n_0 | uart_reader/bit_cnt[0]_i_1_n_0                  |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG               | uart_reader/E[1]               | btn_IBUF[0]                                     |                1 |              8 |         8.00 |
 |  clk_IBUF_BUFG               | uart_reader/E[0]               | btn_IBUF[0]                                     |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG               | uart_reader/E[1]               | btn_IBUF[0]                                     |                1 |              8 |         8.00 |
 |  clk_IBUF_BUFG               | uart_writer/bit_cnt[2]_i_1_n_0 |                                                 |                2 |             11 |         5.50 |
 |  clk_IBUF_BUFG               | uart_writer/btn[0]             | uart_reader/etu_cnt[14]_i_1_n_0                 |                4 |             15 |         3.75 |
 |  clk_IBUF_BUFG               | uart_writer/btn[0]             | uart_writer/etu_cnt[14]_i_1__0_n_0              |                5 |             15 |         3.00 |
