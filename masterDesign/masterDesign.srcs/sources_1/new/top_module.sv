@@ -73,7 +73,7 @@ module top_module(btn, led, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40);
     dff lauch_dff(.d(core_clk), .clk(clk_24Mhz), .reset(rst), .q(data_ref));
     delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.delay_in(data_ref), .sel(sel), .delay_out(data_actual));
     xor_gate data_comp(.a(data_ref), .b(data_actual), .c(xor_result));
-    dff capture_dff(.d(xor_result), .clk(clk_24Mhzclk), .reset(rst), .q(error));
+    dff capture_dff(.d(xor_result), .clk(clk_24Mhz), .reset(rst), .q(error));
     
     /* UART module */
     assign led[0] = rx_indicator;
