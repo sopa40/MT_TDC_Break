@@ -11,6 +11,14 @@ set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN D3    IOSTANDARD LVCMOS33 } [get_ports { rgb[1] }]; #IO_L9N_T1_DQS_34 Sch=led0_g
 set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN F2    IOSTANDARD LVCMOS33 } [get_ports { rgb[0] }]; #IO_L10P_T1_34 Sch=led0_r
+set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN E2    IOSTANDARD LVCMOS33 } [get_ports { led[0] }]; #IO_L8P_T1_34 Sch=led[1]
+set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K1    IOSTANDARD LVCMOS33 } [get_ports { led[1] }]; #IO_L16P_T2_34 Sch=led[2]
+set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J1    IOSTANDARD LVCMOS33 } [get_ports { led[2] }]; #IO_L16N_T2_34 Sch=led[3]
+set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN E1    IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; #IO_L8N_T1_34 Sch=led[4]
 set_property src_info {type:XDC file:1 line:37 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN L12   IOSTANDARD LVCMOS33 } [get_ports { tx }]; #IO_L6N_T0_D08_VREF_14 Sch=uart_rxd_out
 set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]
@@ -23,5 +31,3 @@ set_property src_info {type:XDC file:1 line:56 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { pio16 }]; #IO_L11P_T1_SRCC_14 Sch=pio[16]
 set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN C5    IOSTANDARD LVCMOS33 } [get_ports { pio40 }]; #IO_L5P_T0_34 Sch=pio[40]
-set_property src_info {type:XDC file:1 line:78 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN A4    IOSTANDARD LVCMOS33 } [get_ports { pio48 }]; #IO_L1P_T0_34 Sch=pio[48]
