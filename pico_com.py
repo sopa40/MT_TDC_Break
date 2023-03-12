@@ -6,13 +6,12 @@
 # This data is then plotted as mV against time in ns.
 
 import ctypes
-import numpy as np
 from picosdk.ps5000a import ps5000a as ps
-import matplotlib.pyplot as plt
 from picosdk.functions import adc2mV, assert_pico_ok, mV2adc
 import msvcrt
 
 import measure_delay
+import catch_trigger
 
 def read_input():
     if msvcrt.kbhit():
@@ -39,22 +38,27 @@ except:
         raise
     assert_pico_ok(status["changePowerSource"])
 
-cmd = input("Please enter 'd' for delay measurement and 't' for trigger: ")
-if cmd == 'd':
-    print("Delay measurement between two signals started. Press any key to break!")
-    while(True):    
-        measure_delay.measure_delay_mode(chandle, status)
-        if (read_input() is not None):
-            print("Delay measurement stopped.")
-            break
-
-#time = np.linspace(0, (cmaxSamples.value - 1) * timeIntervalns.value, cmaxSamples.value)
-# plot data from channel A and B
-# plt.plot(time, adc2mVChAMax[:])
-# plt.plot(time, adc2mVChBMax[:])
-# plt.xlabel('Time (ns)')
-# plt.ylabel('Voltage (mV)')
-# plt.show()
+while(True):
+    cmd = input("Please enter   'd' for delay measurement mode\n"
+                "               't' for trigger mode\n"
+                "               'q' for quit\n\n"
+                "   Your choice: ")
+    print("\n")
+    if cmd == 'd':
+        print("Delay measurement between two signals started. Press any key to break!")
+        while(True):    
+            measure_delay.measure_delay_mode(chandle, status)
+            if (read_input() is not None):
+                print("Delay measurement stopped.")
+                break
+    elif cmd == 't':
+        catch_trigger.catch_trigger(chandle, status)
+        print("Trigger cathced!")
+    elif cmd == 'q':
+        print("End of program!")
+        break
+    else:
+        print("Unknown option. Try again...")
 
 status["stop"] = ps.ps5000aStop(chandle)
 assert_pico_ok(status["stop"])
