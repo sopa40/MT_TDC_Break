@@ -1,3 +1,5 @@
 **.impl_1/
 **.jobs/
 !*impl_1/top_module.bit
+__pycache__/**
+**.bak
