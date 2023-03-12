@@ -1,6 +1,4 @@
 import serial
-import sys
-import msvcrt
 import time
 
 START_CHAIN_VALUE = b's'
