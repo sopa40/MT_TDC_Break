@@ -1,5 +1,3 @@
-`include "common.svh"
-
 module CORE 
 #(
 	parameter 		INSTRUCTION_WIDTH 			= 32,
@@ -22,7 +20,7 @@ logic [REGISTER_WIDTH-1:0] 				immediate;
 write_back_sel_t						write_back_sel;
 logic        						 	update_data_mem;
 logic [31:0] 						 	data_mem_w_data;
-logic [1:0]  						 	data_mem_data_width;
+memory_access_width_t					memory_access_width;
 operand_a_sel_t							operand_a_sel;
 operand_b_sel_t							operand_b_sel;
 next_pc_sel_t							next_pc_sel;
@@ -42,7 +40,7 @@ DATAPATH datapath (
 	.immediate     			(immediate),
 	.write_back_sel       	(write_back_sel),
 	.update_data_mem		(update_data_mem),
-	.data_mem_data_width  	(data_mem_data_width),
+	.memory_access_width	(memory_access_width),
 	.operand_a_sel			(operand_a_sel),
 	.operand_b_sel			(operand_b_sel),
 	.next_pc_sel            (next_pc_sel),
@@ -56,7 +54,6 @@ CONTROLPATH controlpath (
 	.instruction 			(instruction),
 	.branch_eq				(branch_eq),
 	.branch_lt				(branch_lt),
-
 	.update_regfile			(update_regfile),
 	.dest_address  			(dest_address),
 	.src1_address  			(src1_address),
@@ -65,7 +62,7 @@ CONTROLPATH controlpath (
 	.immediate 				(immediate),
 	.write_back_sel     	(write_back_sel),
 	.update_data_mem		(update_data_mem),
-	.data_mem_data_width  	(data_mem_data_width),
+	.memory_access_width	(memory_access_width),
 	.next_pc_sel            (next_pc_sel),
 	.operand_a_sel			(operand_a_sel),
 	.operand_b_sel			(operand_b_sel),

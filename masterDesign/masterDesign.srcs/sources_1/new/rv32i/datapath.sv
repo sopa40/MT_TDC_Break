@@ -20,7 +20,7 @@ module DATAPATH
 	input  logic [REGISTER_WIDTH-1:0] 		 	immediate,
 	input  write_back_sel_t						write_back_sel,
 	input  logic        						update_data_mem,
-	input  logic [1:0]  						data_mem_data_width,
+	input  memory_access_width_t 				memory_access_width,
 	input  operand_a_sel_t						operand_a_sel,
 	input  operand_b_sel_t				 		operand_b_sel,
 	input  next_pc_sel_t 						next_pc_sel,
@@ -139,7 +139,7 @@ module DATAPATH
 		.address 		(alu_output),
 		.update_data	(update_data_mem),
 		.w_data 		(src2_data),
-		.data_width 	(data_mem_data_width),
+		.data_width 	(memory_access_width),
 		.r_data 		(data_mem_read_data)
 	);
 	defparam data_mem.WORD_SIZE			= 32;

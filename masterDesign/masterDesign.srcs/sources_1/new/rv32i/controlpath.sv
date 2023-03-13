@@ -23,7 +23,7 @@ module CONTROLPATH
 	output logic [REGISTER_WIDTH-1:0] 			immediate,
 	output write_back_sel_t						write_back_sel,
 	output logic 								update_data_mem,
-	output logic [1:0]							data_mem_data_width,
+	output memory_access_width_t				memory_access_width,
 	output next_pc_sel_t 						next_pc_sel,
 	output operand_a_sel_t						operand_a_sel,
 	output operand_b_sel_t						operand_b_sel,
@@ -106,7 +106,7 @@ module CONTROLPATH
 			alu_ctrl       			= 'b0;
 			immediate				= 'b0;
 			update_data_mem 		= 'b0;
-			data_mem_data_width 	= DATA_MEM_WORD;
+			memory_access_width 	= MEMORY_ACCESS_WORD;
 			comparison_type			= COMPARISON_SIGNED;
 			write_back_sel			= WRITE_BACK_ALU;
 			operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -127,7 +127,7 @@ module CONTROLPATH
 					src2_address   			= src2_R;
 					immediate				= 'b0;
 					update_data_mem 		= 'b0;
-					data_mem_data_width 	= DATA_MEM_WORD;
+					memory_access_width 	= MEMORY_ACCESS_WORD;
 					comparison_type			= COMPARISON_SIGNED;
 					write_back_sel			= WRITE_BACK_ALU;
 					operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -154,7 +154,7 @@ module CONTROLPATH
 							immediate				= 'b0;
 							alu_ctrl				= 'b0;
 							update_data_mem 		= 'b0;
-							data_mem_data_width 	= DATA_MEM_WORD;
+							memory_access_width 	= MEMORY_ACCESS_WORD;
 							comparison_type			= COMPARISON_SIGNED;
 							write_back_sel			= WRITE_BACK_ALU;
 							operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -175,7 +175,7 @@ module CONTROLPATH
 					src2_address   			= 'b0;
 					immediate				= imm_I;
 					update_data_mem 		= 'b0;
-					data_mem_data_width 	= DATA_MEM_WORD;
+					memory_access_width 	= MEMORY_ACCESS_WORD;
 					comparison_type			= COMPARISON_SIGNED;
 					write_back_sel			= WRITE_BACK_ALU;
 					operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -201,7 +201,7 @@ module CONTROLPATH
 							immediate				= 'b0;
 							alu_ctrl				= 'b0;
 							update_data_mem 		= 'b0;
-							data_mem_data_width 	= DATA_MEM_WORD;
+							memory_access_width 	= MEMORY_ACCESS_WORD;
 							comparison_type			= COMPARISON_SIGNED;
 							write_back_sel			= WRITE_BACK_ALU;
 							operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -230,11 +230,11 @@ module CONTROLPATH
 					next_pc_sel				= INCREMENTED_PC;
 
 					case (funct3_I)
-						I_TYPE_LB_FUNC_3: 		data_mem_data_width 	= DATA_MEM_BYTE;
-						I_TYPE_LH_FUNC_3:		data_mem_data_width 	= DATA_MEM_HALFWORD;
-						I_TYPE_LW_FUNC_3:		data_mem_data_width 	= DATA_MEM_WORD;
-						I_TYPE_LBU_FUNC_3:		data_mem_data_width 	= DATA_MEM_BYTE;
-						I_TYPE_LHU_FUNC_3:		data_mem_data_width 	= DATA_MEM_HALFWORD;
+						I_TYPE_LB_FUNC_3: 		memory_access_width 	= MEMORY_ACCESS_BYTE;
+						I_TYPE_LH_FUNC_3:		memory_access_width 	= MEMORY_ACCESS_HALFWORD;
+						I_TYPE_LW_FUNC_3:		memory_access_width 	= MEMORY_ACCESS_WORD;
+						I_TYPE_LBU_FUNC_3:		memory_access_width 	= MEMORY_ACCESS_BYTE;
+						I_TYPE_LHU_FUNC_3:		memory_access_width 	= MEMORY_ACCESS_HALFWORD;
 						default: begin // Load type instruction opcode, but undefined..
 							update_regfile 			= 'b0;
 							dest_address   			= 'b0;
@@ -243,7 +243,7 @@ module CONTROLPATH
 							immediate				= 'b0;
 							alu_ctrl				= 'b0;
 							update_data_mem 		= 'b0;
-							data_mem_data_width 	= DATA_MEM_WORD;
+							memory_access_width 	= MEMORY_ACCESS_WORD;
 							comparison_type			= COMPARISON_SIGNED;
 							write_back_sel			= WRITE_BACK_ALU;
 							operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -271,9 +271,9 @@ module CONTROLPATH
 					next_pc_sel				= INCREMENTED_PC;
 
 					case (funct3_S)
-						S_TYPE_SB_FUNC3:	data_mem_data_width = DATA_MEM_BYTE;			
-						S_TYPE_SH_FUNC3:	data_mem_data_width = DATA_MEM_HALFWORD;
-						S_TYPE_SW_FUNC3:	data_mem_data_width = DATA_MEM_WORD;
+						S_TYPE_SB_FUNC3:	memory_access_width = MEMORY_ACCESS_BYTE;		
+						S_TYPE_SH_FUNC3:	memory_access_width = MEMORY_ACCESS_HALFWORD;
+						S_TYPE_SW_FUNC3:	memory_access_width = MEMORY_ACCESS_WORD;
 						default: begin // Store type instruction opcode, but undefined.. 
 							update_regfile 			= 'b0;
 							dest_address   			= 'b0;
@@ -282,7 +282,7 @@ module CONTROLPATH
 							immediate				= 'b0;
 							alu_ctrl				= 'b0;
 							update_data_mem 		= 'b0;
-							data_mem_data_width 	= DATA_MEM_WORD;
+							memory_access_width 	= MEMORY_ACCESS_WORD;
 							comparison_type			= COMPARISON_SIGNED;
 							write_back_sel			= WRITE_BACK_ALU;
 							operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -340,7 +340,7 @@ module CONTROLPATH
 							immediate				= 'b0;
 							alu_ctrl				= 'b0;
 							update_data_mem 		= 'b0;
-							data_mem_data_width 	= DATA_MEM_WORD;
+							memory_access_width 	= MEMORY_ACCESS_WORD;
 							comparison_type			= COMPARISON_SIGNED;
 							write_back_sel			= WRITE_BACK_ALU;
 							operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -361,9 +361,9 @@ module CONTROLPATH
 					immediate				= imm_J;
 					alu_ctrl				= ALU_OP_ADD;
 					update_data_mem 		= 'b0;
-					data_mem_data_width 	= DATA_MEM_WORD;
+					memory_access_width 	= MEMORY_ACCESS_WORD;
 					comparison_type			= COMPARISON_SIGNED;
-					write_back_sel			= WB_INCREMENTED_PC;
+					write_back_sel			= WRITE_BACK_PC_PLUS_4;
 					operand_a_sel			= OPERAND_1_PC;
 					operand_b_sel			= OPERAND_2_IMMEDIATE;
 					next_pc_sel				= JUMP_PC;
@@ -380,7 +380,7 @@ module CONTROLPATH
 					immediate				= imm_U;
 					alu_ctrl				= ALU_OP_ID_B;
 					update_data_mem 		= 'b0;
-					data_mem_data_width 	= DATA_MEM_WORD;
+					memory_access_width 	= MEMORY_ACCESS_WORD;
 					comparison_type			= COMPARISON_SIGNED;
 					write_back_sel			= WRITE_BACK_ALU;
 					operand_a_sel			= OPERAND_1_DATA_SRC1;
@@ -399,7 +399,7 @@ module CONTROLPATH
 					immediate				= imm_U;
 					alu_ctrl				= ALU_OP_ADD;
 					update_data_mem 		= 'b0;
-					data_mem_data_width 	= DATA_MEM_WORD;
+					memory_access_width 	= MEMORY_ACCESS_WORD;
 					comparison_type			= COMPARISON_SIGNED;
 					write_back_sel			= WRITE_BACK_ALU;
 					operand_a_sel			= OPERAND_1_PC;
@@ -418,7 +418,7 @@ module CONTROLPATH
 					immediate				= imm_I;
 					alu_ctrl				= ALU_OP_ADD;
 					update_data_mem 		= 'b0;
-					data_mem_data_width 	= DATA_MEM_WORD;
+					memory_access_width 	= MEMORY_ACCESS_WORD;
 					comparison_type			= COMPARISON_SIGNED;
 					write_back_sel			= WRITE_BACK_ALU;
 					operand_a_sel			= OPERAND_1_PC;

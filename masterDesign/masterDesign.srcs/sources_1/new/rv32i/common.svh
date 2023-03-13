@@ -123,22 +123,23 @@ localparam
 			S_TYPE_SH_FUNC3		= 3'b001,
 			S_TYPE_SW_FUNC3		= 3'b010;
 
-// data memory
-typedef enum {MEM_WORD, MEM_HALFWORD, MEM_BYTE} read_width_t;
-localparam 	
-			DATA_MEM_WORD 		= 2'b00,
-			DATA_MEM_HALFWORD 	= 2'b01,
-			DATA_MEM_BYTE 		= 2'b10;
+typedef enum {MEMORY_ACCESS_WORD, MEMORY_ACCESS_HALFWORD, MEMORY_ACCESS_BYTE} 	memory_access_width_t;
+typedef enum {WRITE_BACK_MEMORY, WRITE_BACK_ALU, WRITE_BACK_PC_PLUS_4} 			write_back_sel_t;
+typedef enum {OPERAND_1_DATA_SRC1, OPERAND_1_PC} 								operand_a_sel_t;
+typedef enum {OPERAND_2_DATA_SRC2, OPERAND_2_IMMEDIATE} 						operand_b_sel_t;
+typedef enum {INCREMENTED_PC, JUMP_PC}											next_pc_sel_t;
+typedef enum {DATA_MEMORY_BYTE, DATA_MEMORY_HALFWORD, DATA_MEMORY_WORD} 		data_memory_access_width_t;
+typedef enum {COMPARISON_SIGNED, COMPARISON_UNSIGNED} 							comparison_t;
 
-// write-back selection
-localparam 
-			WB_ALU_OUTPUT	 	= 2'b00,
-			WB_MEM_R_DATA		= 2'b01,
-			WB_INCREMENTED_PC 	= 2'b10;
+// UART state machine 
+typedef enum {IDLE, RCV_FIRST_BYTE, RCV_SECOND_BYTE, RCVD, SET_DONE} state_t;
+`define UART_START  2'b00
+`define UART_DATA   2'b01
+`define UART_STOP   2'b10
+`define UART_IDLE   2'b11
 
-typedef enum {WRITE_BACK_MEMORY, WRITE_BACK_ALU, WRITE_BACK_PC_PLUS_4} 	write_back_sel_t;
-typedef enum {OPERAND_1_DATA_SRC1, OPERAND_1_PC} 						operand_a_sel_t;
-typedef enum {OPERAND_2_DATA_SRC2, OPERAND_2_IMMEDIATE} 				operand_b_sel_t;
-typedef enum {INCREMENTED_PC, JUMP_PC}									next_pc_sel_t;
-typedef enum {DATA_MEMORY_BYTE, DATA_MEMORY_HALFWORD, DATA_MEMORY_WORD} data_memory_access_width_t;
-typedef enum {COMPARISON_SIGNED, COMPARISON_UNSIGNED} 					comparison_t;
+`define SYSTEM_CLOCK    12000000
+
+`define BAUD_RATE       9600   
+`define UART_FULL_ETU   (`SYSTEM_CLOCK/`BAUD_RATE)
+`define UART_HALF_ETU   ((`SYSTEM_CLOCK/`BAUD_RATE)/2)

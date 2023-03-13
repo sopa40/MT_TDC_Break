@@ -1,12 +1,4 @@
 `timescale 1ns / 1ps
- 
-`ifndef INV_DELAY_LEN
-    `define INV_DELAY_LEN 206
-`endif
-
-`ifndef NOR_DELAY_LEN
-    `define NOR_DELAY_LEN 4
-`endif
 
 `ifndef SET_LEN_START_CMD
     `define SET_LEN_START_CMD 8'h73
@@ -16,45 +8,44 @@
     `define SET_LEN_SUCCESS_RESPONSE 8'h76
 `endif
 
-module top_module(btn, led, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40);
-    input clk; 
-    input logic [1:0] btn;
-    output logic [3:0] led;
-    output logic [2:0] rgb;
-    input logic uart_rx;
-    
-    output logic tx;
-    /* reference data for delay line */
-    output logic pio1;
-    /* actual data after delay line */
-    output logic pio9;
-    /* whole chain output */
-    output logic pio16;
-    /* clock output */
-    output logic pio40;
-
-    logic rst;
-    logic rst_indicator;
-    
+module top_module
+(
+                    input logic         clk,
+                    input logic [1:0]   btn,
+                    input logic         uart_rx,
+                    output logic [3:0]  led,
+                    output logic [2:0]  rgb,
+                    output logic        tx,                     
+                    /* reference data for delay line */
+                    output logic        pio1, 
+                    /* actual data after delay line */
+                    output logic        pio9, 
+                    /* whole chain output */
+                    output logic        pio16, 
+                    /* clock output */
+                    output logic        pio40
+);
+    /* rst vars */
+    logic rst, rst_indicator;
     /* delay vars */
+    localparam MAXIMUM_COARSE_DELAY_CHAIN_LENGTH         = 256;
+    localparam MAXIMUM_FINE_DELAY_CHAIN_LENGTH           = 256;
+    localparam MAXIMUM_COARSE_DELAY_CHAIN_LENGTH_WIDTH   = $clog2(MAXIMUM_COARSE_DELAY_CHAIN_LENGTH);
+    localparam MAXIMUM_FINE_DELAY_CHAIN_LENGTH_WIDTH     = $clog2(MAXIMUM_FINE_DELAY_CHAIN_LENGTH);
+    logic [MAXIMUM_COARSE_DELAY_CHAIN_LENGTH_WIDTH-1:0]   number_of_active_coarse_delay_elements;
+    logic [MAXIMUM_FINE_DELAY_CHAIN_LENGTH_WIDTH-1:0]     number_of_active_fine_delay_elements;
     logic core_clk, data_ref, data_actual;
-    /* MUX selector */ 
-    logic [15 : 0] sel;
     /* Chain output */
-    logic xor_result;
-    logic error;
-    
+    logic xor_result, error;
     /* UART RX vars */
-    logic rx_indicator;
-    logic valid;
+    logic rx_indicator, valid;
     logic [7:0] rx_data_out;
     /* UART TX vars */
     logic en, rdy;
     logic [7:0] tx_data_in;
     /* UART state machine */
-    typedef enum {IDLE, RCV_FIRST_BYTE, RCV_SECOND_BYTE, RCVD, SET_DONE} state_t;
     state_t current_state;
-
+    
     /* Signal outputs */
     assign pio1 = data_ref;  
     assign pio9 = data_actual;
@@ -68,10 +59,19 @@ module top_module(btn, led, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40);
     logic clk_24Mhz;
     logic locked;
     clock_gen_24MHz (.clk_in(clk), .clk_out(clk_24Mhz), .locked(locked), .reset(rst));
-      
+  
     /* delay chain module */
     dff lauch_dff(.d(core_clk), .clk(clk_24Mhz), .reset(rst), .q(data_ref));
-    delay_chain #(.INV_DELAY_LEN_INPUT(`INV_DELAY_LEN), .NOR_DELAY_LEN_INPUT(`NOR_DELAY_LEN)) delay (.delay_in(data_ref), .sel(sel), .delay_out(data_actual));
+    
+    DelayChain delay_chain (
+        .signal                                  (data_ref),
+        .number_of_active_coarse_delay_elements  (number_of_active_coarse_delay_elements),
+        .number_of_active_fine_delay_elements    (number_of_active_fine_delay_elements),
+        .delayed_signal                          (data_actual)
+    );
+    defparam delay_chain.MAXIMUM_COARSE_DELAY_CHAIN_LENGTH  = MAXIMUM_COARSE_DELAY_CHAIN_LENGTH;
+    defparam delay_chain.MAXIMUM_FINE_DELAY_CHAIN_LENGTH    = MAXIMUM_FINE_DELAY_CHAIN_LENGTH;
+    
     xor_gate data_comp(.a(data_ref), .b(data_actual), .c(xor_result));
     dff capture_dff(.d(xor_result), .clk(clk_24Mhz), .reset(rst), .q(error));
     
@@ -90,7 +90,7 @@ module top_module(btn, led, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40);
             core_clk <= 0;
             rst_indicator <= 1;
             /* disable other LEDs */ 
-            led[2:0] <= 3'b000;
+            led[2:1] <= 3'b000;
             rgb[2:0] <= 3'b111;
         end
         else begin
@@ -102,7 +102,6 @@ module top_module(btn, led, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40);
     /* Mainly UART Clocking */
     always_ff @ (posedge clk) begin
         if (rst) begin
-            sel <= 100;
             rx_indicator <= 0;
         end 
         else begin
@@ -117,19 +116,18 @@ module top_module(btn, led, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40);
                 end
                 RCV_FIRST_BYTE: begin
                     if (valid) begin
-                        sel[7:0] <= rx_data_out[7:0];
+                        number_of_active_coarse_delay_elements[MAXIMUM_COARSE_DELAY_CHAIN_LENGTH_WIDTH-1:0] <= rx_data_out[7:0];
                         current_state <= RCV_SECOND_BYTE;
                     end
                 end
                 RCV_SECOND_BYTE: begin
                     if (valid) begin
-                        sel[15:8] <= rx_data_out[7:0];
+                        number_of_active_fine_delay_elements[MAXIMUM_FINE_DELAY_CHAIN_LENGTH_WIDTH-1:0] <= rx_data_out[7:0];
                         current_state <= RCVD;
                     end
                 end
                 RCVD: begin
                     if (rdy) begin
-                        tx_data_in[7:0] <= sel[15:8];
                         current_state <= SET_DONE;
                     end
                 end
@@ -144,5 +142,4 @@ module top_module(btn, led, rgb, clk, tx, uart_rx, pio1, pio9, pio16, pio40);
             endcase
         end
     end
-
 endmodule

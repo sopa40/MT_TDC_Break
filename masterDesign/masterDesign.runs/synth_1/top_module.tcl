@@ -90,13 +90,14 @@ set_property ip_output_repo d:/vivado_pj/masterDesign/masterDesign.cache/ip [cur
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_verilog D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/rv32i/common.svh
+set_property file_type "Verilog Header" [get_files D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/rv32i/common.svh]
+set_property is_global_include true [get_files D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/rv32i/common.svh]
 read_verilog -library xil_defaultlib -sv {
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/delay_chain.sv
+  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/DelayChain.sv
+  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/LUT.sv
+  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/PDL.sv
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/dff.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/inv.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/mux.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/nor_chain.sv
-  D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/uart_defs.sv
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/uart_rx.sv
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/uart_tx.sv
   D:/vivado_pj/masterDesign/masterDesign.srcs/sources_1/new/xor.sv

@@ -9,7 +9,7 @@ module DATA_MEM
 	input  logic [ADDRESS_WIDTH-1:0] 	address,
 	input  logic 					 	update_data,
 	input  logic [WORD_SIZE-1:0]	 	w_data,
-	input  logic [1:0] 					data_width,
+	input  memory_access_width_t		data_width,
 	output logic [WORD_SIZE-1:0]     	r_data
 );
 
@@ -23,10 +23,8 @@ module DATA_MEM
 				data_memory[i] <= 'd0;
 			end
 		end else begin
-
 			case (data_width)
-
-				DATA_MEM_WORD: begin
+				MEMORY_ACCESS_WORD: begin
 					if (update_data) begin // read word
 						r_data[7:0]   <= data_memory[address];
 						r_data[15:8]  <= data_memory[address+1];
@@ -40,7 +38,7 @@ module DATA_MEM
 					end
 				end
 
-				DATA_MEM_HALFWORD: begin
+				MEMORY_ACCESS_HALFWORD: begin
 					if (update_data) begin // read halfword
 						r_data[7:0]   <= data_memory[address];
 						r_data[15:8]  <= data_memory[address+1];
@@ -50,7 +48,7 @@ module DATA_MEM
 					end
 				end
 
-				DATA_MEM_BYTE: begin
+				MEMORY_ACCESS_BYTE: begin
 					if (update_data) begin // read word
 						r_data[7:0]   <= data_memory[address];
 					end else begin // write word

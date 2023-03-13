@@ -1,7 +1,3 @@
-`timescale 1ns / 1ps
-
-`include "uart_defs.sv"
-
 module uart_tx(
         input logic clk,
         input logic rst,
